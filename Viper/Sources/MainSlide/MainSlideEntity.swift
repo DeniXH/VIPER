@@ -8,10 +8,10 @@
 import Foundation
 // протокол
 // слабая ссылка интерактор
-protocol EntityProtocol {
+protocol MainSlideEntityProtocol {
     
 }
 
-class Entity: EntityProtocol {
-    weak var interactor: InteractorProtocol? 
+class MainSlideEntity: MainSlideEntityProtocol {
+    weak var interactor: MainSlideInteractorProtocol? 
 }

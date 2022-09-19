@@ -9,10 +9,10 @@ import Foundation
 // протокол
 // слабая ссылка на презентер
 
-protocol InteractorProtocol: AnyObject {
+protocol MainSlideInteractorProtocol: AnyObject {
    
 }
 
-class Interactor: InteractorProtocol {
-    weak var presenter: PresenterProtocol?
+class MainSlideInteractor: MainSlideInteractorProtocol {
+    weak var presenter: MainSlidePresenterProtocol?
 }
