@@ -40,7 +40,7 @@ class ThirdViewController: BaseControllerElements {
         dismiss(animated: true) // возвращает она предыдущее окно
     }
 
-   override func setupLayout() { // переопределить
+   override func setupLayout() {
 
         imageView.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false

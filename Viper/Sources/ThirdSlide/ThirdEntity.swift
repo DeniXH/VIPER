@@ -8,9 +8,7 @@
 import Foundation
 // протокол
 // слабая ссылка интерактор
-protocol ThirdEntityProtocol {
-
-}
+protocol ThirdEntityProtocol {}
 
 class ThirdSlideEntity: ThirdEntityProtocol {
     weak var interactor: ThirdInteractorProtocol?

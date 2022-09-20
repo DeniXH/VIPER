@@ -12,7 +12,6 @@ import Foundation
 // сильная ссылка на роутер
 
 protocol ThirdPresenterProtocol: AnyObject {
-
 }
 
 class ThirdPresenter: ThirdPresenterProtocol {

@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+protocol FourthInteractorProtocol: AnyObject {
+    func getDataFromEntity(entity: FourthEntity)
+}
+
+class FourthInteractor {
+    weak var presenter: FourthPresenterProtocol?
+}
+
+extension FourthInteractor: FourthInteractorProtocol {
+    func getDataFromEntity(entity: FourthEntity) {
+        
+    }
+}

@@ -6,3 +6,17 @@
 //
 
 import Foundation
+import UIKit
+
+class FourthModuleBuilder {
+    static func build() -> FourthViewController {
+        let interactor = FourthInteractor()
+        let router = FourthRouter()
+        let presenter = FourthPresenter(interactor: interactor, router: router)
+        let viewController = FourthViewController(presenter: presenter)
+        presenter.view = viewController as? FourthViewProtocol
+        interactor.presenter = presenter
+        router.presenter = presenter
+        return viewController
+    }
+}

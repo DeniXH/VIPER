@@ -6,3 +6,9 @@
 //
 
 import Foundation
+protocol FourthPresenterProtocol: AnyObject {
+}
+
+class FourthPresenter: FourthPresenterProtocol {
+
+}
