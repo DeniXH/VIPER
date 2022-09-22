@@ -13,7 +13,7 @@ import UIKit
 protocol MainSlideViewProtocol: AnyObject {
 }
 
-class MainSlideViewController: BaseControllerElements {
+class MainSlideViewController: MainControllerElements {
     
     var presenter: MainSlidePresenterProtocol?
 

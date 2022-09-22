@@ -2,17 +2,21 @@
 //  ThirdInteractor.swift
 //  Viper
 //
-//  Created by Денис Холодков on 18.09.2022.
+//  Created by Денис Холодков on 19.09.2022.
 //
 
 import Foundation
-// протокол
-// слабая ссылка на презентер
 
 protocol ThirdInteractorProtocol: AnyObject {
-
+    func getDataFromEntity(entity: ThirdEntity)
 }
 
-class ThirdInteractor: ThirdInteractorProtocol {
+class ThirdInteractor {
     weak var presenter: ThirdPresenterProtocol?
+}
+
+extension ThirdInteractor: ThirdInteractorProtocol {
+    func getDataFromEntity(entity: ThirdEntity) {
+
+    }
 }

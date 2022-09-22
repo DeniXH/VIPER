@@ -15,19 +15,10 @@ class SymbolsViewController: UIViewController {
         setupHierarchy()
         setupLayout()
     }
-    
-//    lazy var imageView: UIImageView = {
-//       let imageView = UIImageView()
-//       imageView.image = UIImage(named: "viper")
-//       imageView.contentMode = .scaleAspectFill
-//       imageView.clipsToBounds = true
-//       return imageView
-//   }()
-
 
     lazy var label: UILabel = {
        let label = UILabel()
-       label.text = "Label"
+    //   label.text = "Здесь будет расшифровка"
        label.font = .systemFont(ofSize: 15)
        label.backgroundColor = .blue
        label.textAlignment = .center
@@ -43,34 +34,49 @@ class SymbolsViewController: UIViewController {
 
     lazy var symbolLabel: UILabel = {
         let label = UILabel()
-        label.text = "V"
+       // label.text = "V"
         label.font = .systemFont(ofSize: 25)
-        label.backgroundColor = .blue
+        label.backgroundColor = .cyan
         label.textAlignment = .center
         label.textColor = .white
         return label
     }()
 
-    lazy var button: UIButton = {
-      let button = UIButton()
-        button.setTitle("Кнопка", for: .normal)
-        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-        return button
-    }()
+    lazy var buttonRight: UIButton = {
+       let button = UIButton(type: .custom)
+       button.setImage(UIImage(named: "tintRight"), for: .highlighted)
+       button.alpha = 0.4 // нужна будет)
+       button.addTarget(self, action: #selector(buttonRightPressed), for: .touchUpInside)
+       return button
+   }()
 
+    lazy var buttonLeft: UIButton = {
+       let button = UIButton(type: .custom) // тип кастомный, нет серого выделения как в системной
+       button.setImage(UIImage(named: "tintLeft"), for: .highlighted) // когда будет выделена будет картинка (for: .highlighted)
+       button.alpha = 0.4 // нужна будет)
+       button.addTarget(self, action: #selector(buttonLeftPressed), for: .touchUpInside)
+       return button
+   }()
 
-    @objc func buttonPressed() {}
+    @objc func buttonRightPressed() {}
+    @objc func buttonLeftPressed() {}
+
 
     func setupHierarchy() {
         view.addSubview(label)
         view.addSubview(textLabel)
         view.addSubview(symbolLabel)
+        view.addSubview(buttonLeft)
+        view.addSubview(buttonRight)
     }
 
     func setupLayout() {
       //  imageView.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
         textLabel.translatesAutoresizingMaskIntoConstraints = false
+        symbolLabel.translatesAutoresizingMaskIntoConstraints = false
+        buttonRight.translatesAutoresizingMaskIntoConstraints = false
+        buttonLeft.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
 
@@ -82,7 +88,7 @@ class SymbolsViewController: UIViewController {
             label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            label.heightAnchor.constraint(equalToConstant: 200),
+            label.heightAnchor.constraint(equalToConstant: 100),
 //            label.widthAnchor.constraint(equalToConstant: 250),
 //            label.heightAnchor.constraint(equalToConstant: 1000),
 
@@ -91,10 +97,20 @@ class SymbolsViewController: UIViewController {
             textLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             textLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
 
-            symbolLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            symbolLabel.topAnchor.constraint(equalTo: label.topAnchor),
             symbolLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             symbolLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            symbolLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            symbolLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+
+            buttonRight.topAnchor.constraint(equalTo: view.topAnchor),
+            buttonRight.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            buttonRight.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -60),
+            buttonRight.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+
+            buttonLeft.topAnchor.constraint(equalTo: view.topAnchor),
+            buttonLeft.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            buttonLeft.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            buttonLeft.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 60)
         ])
     }
 }

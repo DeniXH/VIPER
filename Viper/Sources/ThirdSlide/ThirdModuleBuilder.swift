@@ -2,9 +2,10 @@
 //  ThirdModuleBuilder.swift
 //  Viper
 //
-//  Created by Денис Холодков on 18.09.2022.
+//  Created by Денис Холодков on 19.09.2022.
 //
 
+import Foundation
 import UIKit
 
 class ThirdModuleBuilder {

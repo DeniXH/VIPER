@@ -2,7 +2,7 @@
 //  BaseControllerElements.swift
 //  Viper
 //
-//  Created by Денис Холодков on 18.09.2022.
+//  Created by Денис Холодков on 22.09.2022.
 //
 
 import Foundation
@@ -22,8 +22,8 @@ class BaseControllerElements: UIViewController {
 
      lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "viper")
-        imageView.contentMode = .scaleAspectFill
+        imageView.image = UIImage(named: "slide1")
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -75,10 +75,10 @@ class BaseControllerElements: UIViewController {
         buttonLeft.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            imageView.topAnchor.constraint(equalTo: label.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
 
             label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -97,3 +97,4 @@ class BaseControllerElements: UIViewController {
         ])
     }
 }
+

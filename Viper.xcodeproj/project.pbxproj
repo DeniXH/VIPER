@@ -17,26 +17,57 @@
 		5958958428D4C1770083BCCF /* MainSlideEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958958328D4C1770083BCCF /* MainSlideEntity.swift */; };
 		5958958928D4C1890083BCCF /* MainSlideRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958958828D4C1890083BCCF /* MainSlideRouter.swift */; };
 		5958959428D518010083BCCF /* MainSlideModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958959328D518010083BCCF /* MainSlideModuleBuilder.swift */; };
+		929199FD28DCA66300BAAEF6 /* ThirteenthSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929199FC28DCA66200BAAEF6 /* ThirteenthSlideViewController.swift */; };
+		929199FF28DCA81000BAAEF6 /* ThirteenthSlideInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929199FE28DCA81000BAAEF6 /* ThirteenthSlideInteractor.swift */; };
+		92919A0128DCA83400BAAEF6 /* ThirteenthSlidePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92919A0028DCA83400BAAEF6 /* ThirteenthSlidePresenter.swift */; };
+		92919A0328DCA87100BAAEF6 /* ThirteenthSlideEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92919A0228DCA87100BAAEF6 /* ThirteenthSlideEntity.swift */; };
+		92919A0528DCA89200BAAEF6 /* ThirteenthSlideRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92919A0428DCA89200BAAEF6 /* ThirteenthSlideRouter.swift */; };
+		92919A0728DCA8C500BAAEF6 /* ThirteenthSlideModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92919A0628DCA8C500BAAEF6 /* ThirteenthSlideModuleBuilder.swift */; };
+		92919A0928DCA8DC00BAAEF6 /* ThirteenthSlideModelViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92919A0828DCA8DC00BAAEF6 /* ThirteenthSlideModelViews.swift */; };
+		92919A0B28DCB1AF00BAAEF6 /* BaseControllerElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92919A0A28DCB1AF00BAAEF6 /* BaseControllerElements.swift */; };
+		92919A0D28DCB37D00BAAEF6 /* LabelLeftControllerElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92919A0C28DCB37D00BAAEF6 /* LabelLeftControllerElements.swift */; };
+		9292623528DC5A6F00D9DC67 /* FourthModelViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292623428DC5A6F00D9DC67 /* FourthModelViews.swift */; };
+		9292623A28DC6CFE00D9DC67 /* TenthSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292623928DC6CFE00D9DC67 /* TenthSlideViewController.swift */; };
+		9292623C28DC6D2500D9DC67 /* TenthSlideInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292623B28DC6D2500D9DC67 /* TenthSlideInteractor.swift */; };
+		9292623E28DC6D4800D9DC67 /* TenthSlidePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292623D28DC6D4800D9DC67 /* TenthSlidePresenter.swift */; };
+		9292624028DC6D6300D9DC67 /* TenthSlideEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292623F28DC6D6300D9DC67 /* TenthSlideEntity.swift */; };
+		9292624228DC6D7A00D9DC67 /* TenthSlideRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292624128DC6D7A00D9DC67 /* TenthSlideRouter.swift */; };
+		9292624428DC6D9800D9DC67 /* TenthSlideModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292624328DC6D9800D9DC67 /* TenthSlideModuleBuilder.swift */; };
+		9292624628DC6DB100D9DC67 /* TenthSlideModuleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292624528DC6DB100D9DC67 /* TenthSlideModuleViews.swift */; };
+		9292624828DC6DE300D9DC67 /* EleventhSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292624728DC6DE300D9DC67 /* EleventhSlideViewController.swift */; };
+		9292624A28DC6E0300D9DC67 /* EleventhSlideInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292624928DC6E0300D9DC67 /* EleventhSlideInteractor.swift */; };
+		9292624C28DC6E1900D9DC67 /* EleventhSlidePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292624B28DC6E1900D9DC67 /* EleventhSlidePresenter.swift */; };
+		9292624E28DC6E5E00D9DC67 /* EleventhSlideEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292624D28DC6E5E00D9DC67 /* EleventhSlideEntity.swift */; };
+		9292625028DC6E7500D9DC67 /* EleventhSlideRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292624F28DC6E7500D9DC67 /* EleventhSlideRouter.swift */; };
+		9292625228DC6E9900D9DC67 /* EleventhSlideModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292625128DC6E9900D9DC67 /* EleventhSlideModuleBuilder.swift */; };
+		9292625428DC6EB300D9DC67 /* EleventhSlideModuleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292625328DC6EB300D9DC67 /* EleventhSlideModuleViews.swift */; };
+		9292625628DC6EFC00D9DC67 /* TwelthSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292625528DC6EFC00D9DC67 /* TwelthSlideViewController.swift */; };
+		9292625828DC6F1900D9DC67 /* TwelthSlideInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292625728DC6F1900D9DC67 /* TwelthSlideInteractor.swift */; };
+		9292625A28DC6F3700D9DC67 /* TwelthSlidePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292625928DC6F3700D9DC67 /* TwelthSlidePresenter.swift */; };
+		9292625C28DC6F4A00D9DC67 /* TwelthSlideEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292625B28DC6F4A00D9DC67 /* TwelthSlideEntity.swift */; };
+		9292625E28DC6F8A00D9DC67 /* TwelthSlideRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292625D28DC6F8A00D9DC67 /* TwelthSlideRouter.swift */; };
+		9292626028DC6FA400D9DC67 /* TwelthSlideModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292625F28DC6FA400D9DC67 /* TwelthSlideModuleBuilder.swift */; };
+		9292626228DC6FCF00D9DC67 /* TwelthSlideModuleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292626128DC6FCF00D9DC67 /* TwelthSlideModuleViews.swift */; };
 		9298700828D9D74600BCF631 /* SymbolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298700728D9D74600BCF631 /* SymbolsViewController.swift */; };
-		92F9B6D928D759150019EBAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6D828D759150019EBAB /* ViewController.swift */; };
-		92F9B6DB28D7592B0019EBAB /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6DA28D7592B0019EBAB /* Interactor.swift */; };
-		92F9B6DD28D7593F0019EBAB /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6DC28D7593F0019EBAB /* Presenter.swift */; };
-		92F9B6DF28D759500019EBAB /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6DE28D759500019EBAB /* Entity.swift */; };
-		92F9B6E128D759620019EBAB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6E028D759620019EBAB /* Router.swift */; };
-		92F9B6E328D759800019EBAB /* SlideModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6E228D759800019EBAB /* SlideModuleBuilder.swift */; };
-		92F9B6E628D783020019EBAB /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6E528D783020019EBAB /* ThirdViewController.swift */; };
-		92F9B6E828D7832C0019EBAB /* ThirdInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6E728D7832C0019EBAB /* ThirdInteractor.swift */; };
-		92F9B6EA28D783560019EBAB /* ThirdPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6E928D783560019EBAB /* ThirdPresenter.swift */; };
-		92F9B6EC28D783940019EBAB /* ThirdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6EB28D783940019EBAB /* ThirdEntity.swift */; };
-		92F9B6EE28D783AD0019EBAB /* ThirdRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6ED28D783AD0019EBAB /* ThirdRouter.swift */; };
-		92F9B6F028D783D00019EBAB /* ThirdModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6EF28D783D00019EBAB /* ThirdModuleBuilder.swift */; };
-		92F9B6F328D7A68C0019EBAB /* BaseControllerElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6F228D7A68C0019EBAB /* BaseControllerElements.swift */; };
-		92F9B6F628D88D320019EBAB /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6F528D88D310019EBAB /* FourthViewController.swift */; };
-		92F9B6F828D88D490019EBAB /* FourthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6F728D88D490019EBAB /* FourthInteractor.swift */; };
-		92F9B6FA28D88D600019EBAB /* FourthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6F928D88D600019EBAB /* FourthPresenter.swift */; };
-		92F9B6FC28D88D780019EBAB /* FourthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6FB28D88D780019EBAB /* FourthEntity.swift */; };
-		92F9B6FE28D88D8B0019EBAB /* FourthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6FD28D88D8B0019EBAB /* FourthRouter.swift */; };
-		92F9B70028D88DA50019EBAB /* FourthModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6FF28D88DA50019EBAB /* FourthModuleBuilder.swift */; };
+		92F9B6D928D759150019EBAB /* SecondSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6D828D759150019EBAB /* SecondSlideViewController.swift */; };
+		92F9B6DB28D7592B0019EBAB /* SecondSlideInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6DA28D7592B0019EBAB /* SecondSlideInteractor.swift */; };
+		92F9B6DD28D7593F0019EBAB /* SecondSlidePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6DC28D7593F0019EBAB /* SecondSlidePresenter.swift */; };
+		92F9B6DF28D759500019EBAB /* SecondSlideEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6DE28D759500019EBAB /* SecondSlideEntity.swift */; };
+		92F9B6E128D759620019EBAB /* SecondSlideRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6E028D759620019EBAB /* SecondSlideRouter.swift */; };
+		92F9B6E328D759800019EBAB /* SecondSlideModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6E228D759800019EBAB /* SecondSlideModuleBuilder.swift */; };
+		92F9B6E628D783020019EBAB /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6E528D783020019EBAB /* FourthViewController.swift */; };
+		92F9B6E828D7832C0019EBAB /* FourthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6E728D7832C0019EBAB /* FourthInteractor.swift */; };
+		92F9B6EA28D783560019EBAB /* FourthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6E928D783560019EBAB /* FourthPresenter.swift */; };
+		92F9B6EC28D783940019EBAB /* FourthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6EB28D783940019EBAB /* FourthEntity.swift */; };
+		92F9B6EE28D783AD0019EBAB /* FourthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6ED28D783AD0019EBAB /* FourthRouter.swift */; };
+		92F9B6F028D783D00019EBAB /* FourthModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6EF28D783D00019EBAB /* FourthModuleBuilder.swift */; };
+		92F9B6F328D7A68C0019EBAB /* MainControllerElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6F228D7A68C0019EBAB /* MainControllerElements.swift */; };
+		92F9B6F628D88D320019EBAB /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6F528D88D310019EBAB /* ThirdViewController.swift */; };
+		92F9B6F828D88D490019EBAB /* ThirdInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6F728D88D490019EBAB /* ThirdInteractor.swift */; };
+		92F9B6FA28D88D600019EBAB /* ThirdPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6F928D88D600019EBAB /* ThirdPresenter.swift */; };
+		92F9B6FC28D88D780019EBAB /* ThirdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6FB28D88D780019EBAB /* ThirdEntity.swift */; };
+		92F9B6FE28D88D8B0019EBAB /* ThirdRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6FD28D88D8B0019EBAB /* ThirdRouter.swift */; };
+		92F9B70028D88DA50019EBAB /* ThirdModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9B6FF28D88DA50019EBAB /* ThirdModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,29 +99,60 @@
 		5958958328D4C1770083BCCF /* MainSlideEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideEntity.swift; sourceTree = "<group>"; };
 		5958958828D4C1890083BCCF /* MainSlideRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideRouter.swift; sourceTree = "<group>"; };
 		5958959328D518010083BCCF /* MainSlideModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideModuleBuilder.swift; sourceTree = "<group>"; };
-		9298700428D9B94100BCF631 /* Viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9298700528D9B94100BCF631 /* ViperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ViperTests.xctest; path = "/Users/denis/VIPER/build/Debug-iphoneos/ViperTests.xctest"; sourceTree = "<absolute>"; };
-		9298700628D9B94100BCF631 /* ViperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ViperUITests.xctest; path = "/Users/denis/VIPER/build/Debug-iphoneos/ViperUITests.xctest"; sourceTree = "<absolute>"; };
+		929199F828DC742E00BAAEF6 /* Viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		929199F928DC742E00BAAEF6 /* ViperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ViperTests.xctest; path = "/Users/denis/VIPER/build/Debug-iphoneos/ViperTests.xctest"; sourceTree = "<absolute>"; };
+		929199FA28DC742E00BAAEF6 /* ViperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ViperUITests.xctest; path = "/Users/denis/VIPER/build/Debug-iphoneos/ViperUITests.xctest"; sourceTree = "<absolute>"; };
+		929199FC28DCA66200BAAEF6 /* ThirteenthSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthSlideViewController.swift; sourceTree = "<group>"; };
+		929199FE28DCA81000BAAEF6 /* ThirteenthSlideInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthSlideInteractor.swift; sourceTree = "<group>"; };
+		92919A0028DCA83400BAAEF6 /* ThirteenthSlidePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthSlidePresenter.swift; sourceTree = "<group>"; };
+		92919A0228DCA87100BAAEF6 /* ThirteenthSlideEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthSlideEntity.swift; sourceTree = "<group>"; };
+		92919A0428DCA89200BAAEF6 /* ThirteenthSlideRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthSlideRouter.swift; sourceTree = "<group>"; };
+		92919A0628DCA8C500BAAEF6 /* ThirteenthSlideModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthSlideModuleBuilder.swift; sourceTree = "<group>"; };
+		92919A0828DCA8DC00BAAEF6 /* ThirteenthSlideModelViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthSlideModelViews.swift; sourceTree = "<group>"; };
+		92919A0A28DCB1AF00BAAEF6 /* BaseControllerElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControllerElements.swift; sourceTree = "<group>"; };
+		92919A0C28DCB37D00BAAEF6 /* LabelLeftControllerElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelLeftControllerElements.swift; sourceTree = "<group>"; };
+		9292623428DC5A6F00D9DC67 /* FourthModelViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthModelViews.swift; sourceTree = "<group>"; };
+		9292623928DC6CFE00D9DC67 /* TenthSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthSlideViewController.swift; sourceTree = "<group>"; };
+		9292623B28DC6D2500D9DC67 /* TenthSlideInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthSlideInteractor.swift; sourceTree = "<group>"; };
+		9292623D28DC6D4800D9DC67 /* TenthSlidePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthSlidePresenter.swift; sourceTree = "<group>"; };
+		9292623F28DC6D6300D9DC67 /* TenthSlideEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthSlideEntity.swift; sourceTree = "<group>"; };
+		9292624128DC6D7A00D9DC67 /* TenthSlideRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthSlideRouter.swift; sourceTree = "<group>"; };
+		9292624328DC6D9800D9DC67 /* TenthSlideModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthSlideModuleBuilder.swift; sourceTree = "<group>"; };
+		9292624528DC6DB100D9DC67 /* TenthSlideModuleViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthSlideModuleViews.swift; sourceTree = "<group>"; };
+		9292624728DC6DE300D9DC67 /* EleventhSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EleventhSlideViewController.swift; sourceTree = "<group>"; };
+		9292624928DC6E0300D9DC67 /* EleventhSlideInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EleventhSlideInteractor.swift; sourceTree = "<group>"; };
+		9292624B28DC6E1900D9DC67 /* EleventhSlidePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EleventhSlidePresenter.swift; sourceTree = "<group>"; };
+		9292624D28DC6E5E00D9DC67 /* EleventhSlideEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EleventhSlideEntity.swift; sourceTree = "<group>"; };
+		9292624F28DC6E7500D9DC67 /* EleventhSlideRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EleventhSlideRouter.swift; sourceTree = "<group>"; };
+		9292625128DC6E9900D9DC67 /* EleventhSlideModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EleventhSlideModuleBuilder.swift; sourceTree = "<group>"; };
+		9292625328DC6EB300D9DC67 /* EleventhSlideModuleViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EleventhSlideModuleViews.swift; sourceTree = "<group>"; };
+		9292625528DC6EFC00D9DC67 /* TwelthSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelthSlideViewController.swift; sourceTree = "<group>"; };
+		9292625728DC6F1900D9DC67 /* TwelthSlideInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelthSlideInteractor.swift; sourceTree = "<group>"; };
+		9292625928DC6F3700D9DC67 /* TwelthSlidePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelthSlidePresenter.swift; sourceTree = "<group>"; };
+		9292625B28DC6F4A00D9DC67 /* TwelthSlideEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelthSlideEntity.swift; sourceTree = "<group>"; };
+		9292625D28DC6F8A00D9DC67 /* TwelthSlideRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelthSlideRouter.swift; sourceTree = "<group>"; };
+		9292625F28DC6FA400D9DC67 /* TwelthSlideModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelthSlideModuleBuilder.swift; sourceTree = "<group>"; };
+		9292626128DC6FCF00D9DC67 /* TwelthSlideModuleViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelthSlideModuleViews.swift; sourceTree = "<group>"; };
 		9298700728D9D74600BCF631 /* SymbolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsViewController.swift; sourceTree = "<group>"; };
-		92F9B6D828D759150019EBAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		92F9B6DA28D7592B0019EBAB /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
-		92F9B6DC28D7593F0019EBAB /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		92F9B6DE28D759500019EBAB /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
-		92F9B6E028D759620019EBAB /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		92F9B6E228D759800019EBAB /* SlideModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideModuleBuilder.swift; sourceTree = "<group>"; };
-		92F9B6E528D783020019EBAB /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		92F9B6E728D7832C0019EBAB /* ThirdInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdInteractor.swift; sourceTree = "<group>"; };
-		92F9B6E928D783560019EBAB /* ThirdPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPresenter.swift; sourceTree = "<group>"; };
-		92F9B6EB28D783940019EBAB /* ThirdEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdEntity.swift; sourceTree = "<group>"; };
-		92F9B6ED28D783AD0019EBAB /* ThirdRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdRouter.swift; sourceTree = "<group>"; };
-		92F9B6EF28D783D00019EBAB /* ThirdModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdModuleBuilder.swift; sourceTree = "<group>"; };
-		92F9B6F228D7A68C0019EBAB /* BaseControllerElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControllerElements.swift; sourceTree = "<group>"; };
-		92F9B6F528D88D310019EBAB /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		92F9B6F728D88D490019EBAB /* FourthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthInteractor.swift; sourceTree = "<group>"; };
-		92F9B6F928D88D600019EBAB /* FourthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPresenter.swift; sourceTree = "<group>"; };
-		92F9B6FB28D88D780019EBAB /* FourthEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthEntity.swift; sourceTree = "<group>"; };
-		92F9B6FD28D88D8B0019EBAB /* FourthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthRouter.swift; sourceTree = "<group>"; };
-		92F9B6FF28D88DA50019EBAB /* FourthModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthModuleBuilder.swift; sourceTree = "<group>"; };
+		92F9B6D828D759150019EBAB /* SecondSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSlideViewController.swift; sourceTree = "<group>"; };
+		92F9B6DA28D7592B0019EBAB /* SecondSlideInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSlideInteractor.swift; sourceTree = "<group>"; };
+		92F9B6DC28D7593F0019EBAB /* SecondSlidePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSlidePresenter.swift; sourceTree = "<group>"; };
+		92F9B6DE28D759500019EBAB /* SecondSlideEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSlideEntity.swift; sourceTree = "<group>"; };
+		92F9B6E028D759620019EBAB /* SecondSlideRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSlideRouter.swift; sourceTree = "<group>"; };
+		92F9B6E228D759800019EBAB /* SecondSlideModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSlideModuleBuilder.swift; sourceTree = "<group>"; };
+		92F9B6E528D783020019EBAB /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		92F9B6E728D7832C0019EBAB /* FourthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthInteractor.swift; sourceTree = "<group>"; };
+		92F9B6E928D783560019EBAB /* FourthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPresenter.swift; sourceTree = "<group>"; };
+		92F9B6EB28D783940019EBAB /* FourthEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthEntity.swift; sourceTree = "<group>"; };
+		92F9B6ED28D783AD0019EBAB /* FourthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthRouter.swift; sourceTree = "<group>"; };
+		92F9B6EF28D783D00019EBAB /* FourthModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthModuleBuilder.swift; sourceTree = "<group>"; };
+		92F9B6F228D7A68C0019EBAB /* MainControllerElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerElements.swift; sourceTree = "<group>"; };
+		92F9B6F528D88D310019EBAB /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		92F9B6F728D88D490019EBAB /* ThirdInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdInteractor.swift; sourceTree = "<group>"; };
+		92F9B6F928D88D600019EBAB /* ThirdPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPresenter.swift; sourceTree = "<group>"; };
+		92F9B6FB28D88D780019EBAB /* ThirdEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdEntity.swift; sourceTree = "<group>"; };
+		92F9B6FD28D88D8B0019EBAB /* ThirdRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdRouter.swift; sourceTree = "<group>"; };
+		92F9B6FF28D88DA50019EBAB /* ThirdModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				5958953428D49D660083BCCF /* Viper */,
-				9298700428D9B94100BCF631 /* Viper.app */,
+				929199F828DC742E00BAAEF6 /* Viper.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,60 +234,123 @@
 			children = (
 				92F9B6F128D7A61A0019EBAB /* BaseElements */,
 				5958957028D4C0BC0083BCCF /* MainSlide */,
-				92F9B6D728D757C10019EBAB /* Slide */,
-				92F9B6E428D782A30019EBAB /* ThirdSlide */,
-				92F9B6F428D88CF80019EBAB /* FourthSlide */,
+				92F9B6D728D757C10019EBAB /* SecondSlide */,
+				92F9B6F428D88CF80019EBAB /* ThirdSlide */,
+				92F9B6E428D782A30019EBAB /* FourthToNinthSlide */,
+				9292623628DC6AA500D9DC67 /* TenthSlide */,
+				9292623728DC6C1B00D9DC67 /* EleventhSlide */,
+				9292623828DC6C6300D9DC67 /* TwelfthSlide */,
+				929199FB28DCA52400BAAEF6 /* ThirteenthSlide */,
 				5958956C28D4A4F60083BCCF /* Application */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		92F9B6D728D757C10019EBAB /* Slide */ = {
+		929199FB28DCA52400BAAEF6 /* ThirteenthSlide */ = {
 			isa = PBXGroup;
 			children = (
-				92F9B6D828D759150019EBAB /* ViewController.swift */,
-				92F9B6DA28D7592B0019EBAB /* Interactor.swift */,
-				92F9B6DC28D7593F0019EBAB /* Presenter.swift */,
-				92F9B6DE28D759500019EBAB /* Entity.swift */,
-				92F9B6E028D759620019EBAB /* Router.swift */,
-				92F9B6E228D759800019EBAB /* SlideModuleBuilder.swift */,
+				929199FC28DCA66200BAAEF6 /* ThirteenthSlideViewController.swift */,
+				929199FE28DCA81000BAAEF6 /* ThirteenthSlideInteractor.swift */,
+				92919A0028DCA83400BAAEF6 /* ThirteenthSlidePresenter.swift */,
+				92919A0228DCA87100BAAEF6 /* ThirteenthSlideEntity.swift */,
+				92919A0428DCA89200BAAEF6 /* ThirteenthSlideRouter.swift */,
+				92919A0628DCA8C500BAAEF6 /* ThirteenthSlideModuleBuilder.swift */,
+				92919A0828DCA8DC00BAAEF6 /* ThirteenthSlideModelViews.swift */,
 			);
-			path = Slide;
+			path = ThirteenthSlide;
 			sourceTree = "<group>";
 		};
-		92F9B6E428D782A30019EBAB /* ThirdSlide */ = {
+		9292623628DC6AA500D9DC67 /* TenthSlide */ = {
 			isa = PBXGroup;
 			children = (
-				92F9B6E528D783020019EBAB /* ThirdViewController.swift */,
-				92F9B6E728D7832C0019EBAB /* ThirdInteractor.swift */,
-				92F9B6E928D783560019EBAB /* ThirdPresenter.swift */,
-				92F9B6EB28D783940019EBAB /* ThirdEntity.swift */,
-				92F9B6ED28D783AD0019EBAB /* ThirdRouter.swift */,
-				92F9B6EF28D783D00019EBAB /* ThirdModuleBuilder.swift */,
+				9292623928DC6CFE00D9DC67 /* TenthSlideViewController.swift */,
+				9292623B28DC6D2500D9DC67 /* TenthSlideInteractor.swift */,
+				9292623D28DC6D4800D9DC67 /* TenthSlidePresenter.swift */,
+				9292623F28DC6D6300D9DC67 /* TenthSlideEntity.swift */,
+				9292624128DC6D7A00D9DC67 /* TenthSlideRouter.swift */,
+				9292624328DC6D9800D9DC67 /* TenthSlideModuleBuilder.swift */,
+				9292624528DC6DB100D9DC67 /* TenthSlideModuleViews.swift */,
 			);
-			path = ThirdSlide;
+			path = TenthSlide;
+			sourceTree = "<group>";
+		};
+		9292623728DC6C1B00D9DC67 /* EleventhSlide */ = {
+			isa = PBXGroup;
+			children = (
+				9292624728DC6DE300D9DC67 /* EleventhSlideViewController.swift */,
+				9292624928DC6E0300D9DC67 /* EleventhSlideInteractor.swift */,
+				9292624B28DC6E1900D9DC67 /* EleventhSlidePresenter.swift */,
+				9292624D28DC6E5E00D9DC67 /* EleventhSlideEntity.swift */,
+				9292624F28DC6E7500D9DC67 /* EleventhSlideRouter.swift */,
+				9292625128DC6E9900D9DC67 /* EleventhSlideModuleBuilder.swift */,
+				9292625328DC6EB300D9DC67 /* EleventhSlideModuleViews.swift */,
+			);
+			path = EleventhSlide;
+			sourceTree = "<group>";
+		};
+		9292623828DC6C6300D9DC67 /* TwelfthSlide */ = {
+			isa = PBXGroup;
+			children = (
+				9292625528DC6EFC00D9DC67 /* TwelthSlideViewController.swift */,
+				9292625728DC6F1900D9DC67 /* TwelthSlideInteractor.swift */,
+				9292625928DC6F3700D9DC67 /* TwelthSlidePresenter.swift */,
+				9292625B28DC6F4A00D9DC67 /* TwelthSlideEntity.swift */,
+				9292625D28DC6F8A00D9DC67 /* TwelthSlideRouter.swift */,
+				9292625F28DC6FA400D9DC67 /* TwelthSlideModuleBuilder.swift */,
+				9292626128DC6FCF00D9DC67 /* TwelthSlideModuleViews.swift */,
+			);
+			path = TwelfthSlide;
+			sourceTree = "<group>";
+		};
+		92F9B6D728D757C10019EBAB /* SecondSlide */ = {
+			isa = PBXGroup;
+			children = (
+				92F9B6D828D759150019EBAB /* SecondSlideViewController.swift */,
+				92F9B6DA28D7592B0019EBAB /* SecondSlideInteractor.swift */,
+				92F9B6DC28D7593F0019EBAB /* SecondSlidePresenter.swift */,
+				92F9B6DE28D759500019EBAB /* SecondSlideEntity.swift */,
+				92F9B6E028D759620019EBAB /* SecondSlideRouter.swift */,
+				92F9B6E228D759800019EBAB /* SecondSlideModuleBuilder.swift */,
+			);
+			path = SecondSlide;
+			sourceTree = "<group>";
+		};
+		92F9B6E428D782A30019EBAB /* FourthToNinthSlide */ = {
+			isa = PBXGroup;
+			children = (
+				92F9B6E528D783020019EBAB /* FourthViewController.swift */,
+				92F9B6E728D7832C0019EBAB /* FourthInteractor.swift */,
+				92F9B6E928D783560019EBAB /* FourthPresenter.swift */,
+				92F9B6EB28D783940019EBAB /* FourthEntity.swift */,
+				92F9B6ED28D783AD0019EBAB /* FourthRouter.swift */,
+				92F9B6EF28D783D00019EBAB /* FourthModuleBuilder.swift */,
+				9292623428DC5A6F00D9DC67 /* FourthModelViews.swift */,
+			);
+			path = FourthToNinthSlide;
 			sourceTree = "<group>";
 		};
 		92F9B6F128D7A61A0019EBAB /* BaseElements */ = {
 			isa = PBXGroup;
 			children = (
-				92F9B6F228D7A68C0019EBAB /* BaseControllerElements.swift */,
+				92919A0A28DCB1AF00BAAEF6 /* BaseControllerElements.swift */,
+				92F9B6F228D7A68C0019EBAB /* MainControllerElements.swift */,
 				9298700728D9D74600BCF631 /* SymbolsViewController.swift */,
+				92919A0C28DCB37D00BAAEF6 /* LabelLeftControllerElements.swift */,
 			);
 			path = BaseElements;
 			sourceTree = "<group>";
 		};
-		92F9B6F428D88CF80019EBAB /* FourthSlide */ = {
+		92F9B6F428D88CF80019EBAB /* ThirdSlide */ = {
 			isa = PBXGroup;
 			children = (
-				92F9B6F528D88D310019EBAB /* FourthViewController.swift */,
-				92F9B6F728D88D490019EBAB /* FourthInteractor.swift */,
-				92F9B6F928D88D600019EBAB /* FourthPresenter.swift */,
-				92F9B6FB28D88D780019EBAB /* FourthEntity.swift */,
-				92F9B6FD28D88D8B0019EBAB /* FourthRouter.swift */,
-				92F9B6FF28D88DA50019EBAB /* FourthModuleBuilder.swift */,
+				92F9B6F528D88D310019EBAB /* ThirdViewController.swift */,
+				92F9B6F728D88D490019EBAB /* ThirdInteractor.swift */,
+				92F9B6F928D88D600019EBAB /* ThirdPresenter.swift */,
+				92F9B6FB28D88D780019EBAB /* ThirdEntity.swift */,
+				92F9B6FD28D88D8B0019EBAB /* ThirdRouter.swift */,
+				92F9B6FF28D88DA50019EBAB /* ThirdModuleBuilder.swift */,
 			);
-			path = FourthSlide;
+			path = ThirdSlide;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +370,7 @@
 			);
 			name = Viper;
 			productName = Viper;
-			productReference = 9298700428D9B94100BCF631 /* Viper.app */;
+			productReference = 929199F828DC742E00BAAEF6 /* Viper.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5958954728D49D720083BCCF /* ViperTests */ = {
@@ -263,7 +388,7 @@
 			);
 			name = ViperTests;
 			productName = ViperTests;
-			productReference = 9298700528D9B94100BCF631 /* ViperTests.xctest */;
+			productReference = 929199F928DC742E00BAAEF6 /* ViperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		5958955228D49D720083BCCF /* ViperUITests */ = {
@@ -281,7 +406,7 @@
 			);
 			name = ViperUITests;
 			productName = ViperUITests;
-			productReference = 9298700628D9B94100BCF631 /* ViperUITests.xctest */;
+			productReference = 929199FA28DC742E00BAAEF6 /* ViperUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -357,34 +482,65 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F9B6F828D88D490019EBAB /* FourthInteractor.swift in Sources */,
+				9292623E28DC6D4800D9DC67 /* TenthSlidePresenter.swift in Sources */,
+				92F9B6F828D88D490019EBAB /* ThirdInteractor.swift in Sources */,
 				5958958928D4C1890083BCCF /* MainSlideRouter.swift in Sources */,
-				92F9B6DD28D7593F0019EBAB /* Presenter.swift in Sources */,
-				92F9B6F628D88D320019EBAB /* FourthViewController.swift in Sources */,
+				9292625C28DC6F4A00D9DC67 /* TwelthSlideEntity.swift in Sources */,
+				92F9B6DD28D7593F0019EBAB /* SecondSlidePresenter.swift in Sources */,
+				92F9B6F628D88D320019EBAB /* ThirdViewController.swift in Sources */,
 				5958957F28D4C1120083BCCF /* MainSlidePresenter.swift in Sources */,
-				92F9B6DB28D7592B0019EBAB /* Interactor.swift in Sources */,
+				92F9B6DB28D7592B0019EBAB /* SecondSlideInteractor.swift in Sources */,
 				5958958428D4C1770083BCCF /* MainSlideEntity.swift in Sources */,
-				92F9B6EA28D783560019EBAB /* ThirdPresenter.swift in Sources */,
-				92F9B6D928D759150019EBAB /* ViewController.swift in Sources */,
-				92F9B6E828D7832C0019EBAB /* ThirdInteractor.swift in Sources */,
-				92F9B6FE28D88D8B0019EBAB /* FourthRouter.swift in Sources */,
+				92919A0D28DCB37D00BAAEF6 /* LabelLeftControllerElements.swift in Sources */,
+				9292624228DC6D7A00D9DC67 /* TenthSlideRouter.swift in Sources */,
+				9292625028DC6E7500D9DC67 /* EleventhSlideRouter.swift in Sources */,
+				9292624C28DC6E1900D9DC67 /* EleventhSlidePresenter.swift in Sources */,
+				92F9B6EA28D783560019EBAB /* FourthPresenter.swift in Sources */,
+				92919A0528DCA89200BAAEF6 /* ThirteenthSlideRouter.swift in Sources */,
+				9292624828DC6DE300D9DC67 /* EleventhSlideViewController.swift in Sources */,
+				92F9B6D928D759150019EBAB /* SecondSlideViewController.swift in Sources */,
+				92F9B6E828D7832C0019EBAB /* FourthInteractor.swift in Sources */,
+				929199FD28DCA66300BAAEF6 /* ThirteenthSlideViewController.swift in Sources */,
+				9292624028DC6D6300D9DC67 /* TenthSlideEntity.swift in Sources */,
+				92F9B6FE28D88D8B0019EBAB /* ThirdRouter.swift in Sources */,
+				9292624428DC6D9800D9DC67 /* TenthSlideModuleBuilder.swift in Sources */,
+				9292626028DC6FA400D9DC67 /* TwelthSlideModuleBuilder.swift in Sources */,
 				5958959428D518010083BCCF /* MainSlideModuleBuilder.swift in Sources */,
-				92F9B6FA28D88D600019EBAB /* FourthPresenter.swift in Sources */,
-				92F9B6E628D783020019EBAB /* ThirdViewController.swift in Sources */,
+				9292623528DC5A6F00D9DC67 /* FourthModelViews.swift in Sources */,
+				92F9B6FA28D88D600019EBAB /* ThirdPresenter.swift in Sources */,
+				92F9B6E628D783020019EBAB /* FourthViewController.swift in Sources */,
+				92919A0328DCA87100BAAEF6 /* ThirteenthSlideEntity.swift in Sources */,
+				9292625628DC6EFC00D9DC67 /* TwelthSlideViewController.swift in Sources */,
+				9292624E28DC6E5E00D9DC67 /* EleventhSlideEntity.swift in Sources */,
 				9298700828D9D74600BCF631 /* SymbolsViewController.swift in Sources */,
-				92F9B6EC28D783940019EBAB /* ThirdEntity.swift in Sources */,
-				92F9B6F028D783D00019EBAB /* ThirdModuleBuilder.swift in Sources */,
+				9292624A28DC6E0300D9DC67 /* EleventhSlideInteractor.swift in Sources */,
+				92919A0B28DCB1AF00BAAEF6 /* BaseControllerElements.swift in Sources */,
+				929199FF28DCA81000BAAEF6 /* ThirteenthSlideInteractor.swift in Sources */,
+				92F9B6EC28D783940019EBAB /* FourthEntity.swift in Sources */,
+				9292625E28DC6F8A00D9DC67 /* TwelthSlideRouter.swift in Sources */,
+				92919A0728DCA8C500BAAEF6 /* ThirteenthSlideModuleBuilder.swift in Sources */,
+				92F9B6F028D783D00019EBAB /* FourthModuleBuilder.swift in Sources */,
+				9292624628DC6DB100D9DC67 /* TenthSlideModuleViews.swift in Sources */,
 				5958953A28D49D660083BCCF /* MainSlideViewController.swift in Sources */,
-				92F9B6DF28D759500019EBAB /* Entity.swift in Sources */,
+				9292625428DC6EB300D9DC67 /* EleventhSlideModuleViews.swift in Sources */,
+				9292626228DC6FCF00D9DC67 /* TwelthSlideModuleViews.swift in Sources */,
+				92919A0128DCA83400BAAEF6 /* ThirteenthSlidePresenter.swift in Sources */,
+				92F9B6DF28D759500019EBAB /* SecondSlideEntity.swift in Sources */,
+				9292625828DC6F1900D9DC67 /* TwelthSlideInteractor.swift in Sources */,
 				5958957A28D4C0F30083BCCF /* MainSlideInteractor.swift in Sources */,
+				9292623C28DC6D2500D9DC67 /* TenthSlideInteractor.swift in Sources */,
+				9292625228DC6E9900D9DC67 /* EleventhSlideModuleBuilder.swift in Sources */,
+				9292625A28DC6F3700D9DC67 /* TwelthSlidePresenter.swift in Sources */,
 				5958953628D49D660083BCCF /* AppDelegate.swift in Sources */,
-				92F9B6FC28D88D780019EBAB /* FourthEntity.swift in Sources */,
-				92F9B6E328D759800019EBAB /* SlideModuleBuilder.swift in Sources */,
-				92F9B70028D88DA50019EBAB /* FourthModuleBuilder.swift in Sources */,
-				92F9B6EE28D783AD0019EBAB /* ThirdRouter.swift in Sources */,
+				9292623A28DC6CFE00D9DC67 /* TenthSlideViewController.swift in Sources */,
+				92F9B6FC28D88D780019EBAB /* ThirdEntity.swift in Sources */,
+				92F9B6E328D759800019EBAB /* SecondSlideModuleBuilder.swift in Sources */,
+				92919A0928DCA8DC00BAAEF6 /* ThirteenthSlideModelViews.swift in Sources */,
+				92F9B70028D88DA50019EBAB /* ThirdModuleBuilder.swift in Sources */,
+				92F9B6EE28D783AD0019EBAB /* FourthRouter.swift in Sources */,
 				5958953828D49D660083BCCF /* SceneDelegate.swift in Sources */,
-				92F9B6E128D759620019EBAB /* Router.swift in Sources */,
-				92F9B6F328D7A68C0019EBAB /* BaseControllerElements.swift in Sources */,
+				92F9B6E128D759620019EBAB /* SecondSlideRouter.swift in Sources */,
+				92F9B6F328D7A68C0019EBAB /* MainControllerElements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,7 @@ class MainSlideRouter {
 
 extension MainSlideRouter: MainSlideRouterProtocol {
     func openNextModule(vc: UIViewController) {
-        let viewControllerSlide = SlideModuleBuilder.build()
+        let viewControllerSlide = SecondSlideModuleBuilder.build()
         // presenter.функция роутера, с параметром ввиде контроллера
         vc.present(viewControllerSlide, animated: true)
     }
