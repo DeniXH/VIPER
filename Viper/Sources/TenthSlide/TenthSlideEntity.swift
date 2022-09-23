@@ -9,7 +9,6 @@ import Foundation
 // протокол
 // слабая ссылка интерактор
 protocol TenthSlideEntityProtocol {
-
 }
 
 class TenthSlideEntity: TenthSlideEntityProtocol {

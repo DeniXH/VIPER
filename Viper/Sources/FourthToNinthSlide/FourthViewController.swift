@@ -107,7 +107,6 @@ class FourthViewController: UIViewController {
         nextStep?.3 = nil
     }
 
-
     func setupHierarchy() {
         view.addSubview(label)
         view.addSubview(textLabel)

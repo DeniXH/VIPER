@@ -16,7 +16,6 @@ protocol FourthInteractorProtocol: AnyObject {
 
 // Создаем енам состояний
 enum State {
-   // case one
     case two
     case three
     case four
@@ -26,54 +25,71 @@ enum State {
 
 class FourthInteractor: FourthInteractorProtocol {
     weak var presenter: FourthPresenterProtocol?
+    var entity: FourthEntityProtocol?
+    var modelViews: ModelViews
 
     var isChangeScreen: Bool?
 
-    let modelsView: ModelViews = ModelViews(labelsText: ["V", "I", "P", "E", "R"],
-                                            textScreens: ["Показывает, что скажет Презентер и передает ввод пользователя презентеру",
-                                                          "Содержит описание сценария использования",
-                                                          "Содержит логику отображения и умеет подготавливать данные для представления пользователю, а также реагировать на ввод пользователя",
-                                                          "Описание предметной модели",
-                                                          "Описывает логику навигации между экранами"],
-                                            nameLabel: ["View", "Interactor", "Presenter", "Entity", "Router"])
-    var currentState = State.two
+//    struct Models {
+//    var labelText: String
+//    var textScreens: String
+//    var nameLabel: String
+//    }
+//
+//   // var models: (labelText: String, textScreens: String, nameLabel: String)? = nil
+//    var models: Models?
 
+    init(entity: FourthEntityProtocol?) {
+        self.entity = entity
+    }
+
+
+
+    var currentState = State.two
+    var count = 1
+   // var models = (labelText: "", textScreens: "", nameLabel: "")
+   // var models = (labelText: String, textScreens: String, nameLabel: String)?(nil)
+
+  //  (labelText: String , textScreens: String, nameLabel: String)
     func nextStepView() -> (String?, String?, String?, Bool?) {
+       // var models: (labelText: String, textScreens: String, nameLabel: String)
         // в зависимости от состояния меняем лейбл и меняем дальнейшее состояние
+        guard let models: (labelText: String, textScreens: String, nameLabel: String) = entity?.getModel(modelsView: modelViews, position: count) else {}
         switch currentState {
-//        case .one:
-//            currentState = State.two
-//            isChangeScreen = nil
-//            return (modelsView.labelsText[0],
-//                    modelsView.textScreens[0],
-//                    isChangeScreen)
         case .two:
             currentState = State.three
             isChangeScreen = nil
-            return (modelsView.labelsText[1],
-                    modelsView.textScreens[1],
-                    modelsView.nameLabel[1],
+            count += 1
+            return (models.labelText,
+                    models.textScreens,
+                    models.nameLabel,
                     isChangeScreen)
         case .three:
             currentState = State.four
             isChangeScreen = nil
-            return (modelsView.labelsText[2],
-                    modelsView.textScreens[2],
-                    modelsView.nameLabel[2],
+//            guard let models: (labelText: String, textScreens: String, nameLabel: String) = entity?.getModel(modelsView: modelViews, position: count) else {}
+            count += 1
+            return (models.labelText,
+                    models.textScreens,
+                    models.nameLabel,
                     isChangeScreen)
         case .four:
             currentState = State.five
             isChangeScreen = nil
-            return (modelsView.labelsText[3],
-                    modelsView.textScreens[3],
-                    modelsView.nameLabel[3],
+//            guard let models: (labelText: String, textScreens: String, nameLabel: String) = entity?.getModel(modelsView: modelViews, position: count) else {}
+            count += 1
+            return (models.labelText,
+                    models.textScreens,
+                    models.nameLabel,
                     isChangeScreen)
         case .five:
             currentState = State.nextVC
             isChangeScreen = nil
-            return (modelsView.labelsText[4],
-                    modelsView.textScreens[4],
-                    modelsView.nameLabel[4],
+//            guard let models = entity?.getModel(modelsView: modelViews, position: count) else {}
+            count += 1
+            return (models.labelText,
+                    models.textScreens,
+                    models.nameLabel,
                     nil)
         case .nextVC:
             currentState = State.two
@@ -83,37 +99,49 @@ class FourthInteractor: FourthInteractorProtocol {
     }
 
     func previosStepView() -> (String?, String?, String?, Bool?) {
+      //  var models: (labelText: String, textScreens: String, nameLabel: String)
         // в зависимости от состояния меняем лейбл и меняем дальнейшее состояние
+        guard let models: (labelText: String, textScreens: String, nameLabel: String) = entity?.getModel(modelsView: modelViews, position: count) else {}
+
         switch currentState {
         case .five:
             currentState = State.four
-            return (modelsView.labelsText[4],
-                    modelsView.textScreens[4],
-                    modelsView.nameLabel[4],
-                    nil)
+//            models = entity.getModel(modelsView: modelViews, position: count)
+            count -= 1
+            return (models.labelText,
+                    models.textScreens,
+                    models.nameLabel,
+                    isChangeScreen)
+
         case .four:
             currentState = State.three
-            return (modelsView.labelsText[3],
-                    modelsView.textScreens[3],
-                    modelsView.nameLabel[3],
-                    nil)
+//            models = entity.getModel(modelsView: modelViews, position: count)
+            count -= 1
+            return (models.labelText,
+                    models.textScreens,
+                    models.nameLabel,
+                    isChangeScreen)
+
         case .three:
             currentState = State.two
-            return (modelsView.labelsText[2],
-                    modelsView.textScreens[2],
-                    modelsView.nameLabel[2],
-                    nil)
+//            models = entity.getModel(modelsView: modelViews, position: count)
+            count -= 1
+            return (models.labelText,
+                    models.textScreens,
+                    models.nameLabel,
+                    isChangeScreen)
+
         case .two:
             currentState = State.nextVC
-            return (modelsView.labelsText[0],
-                    modelsView.textScreens[0],
-                    modelsView.nameLabel[0],
-                    nil)
-       // case .one:
-
+//            models = entity.getModel(modelsView: modelViews, position: count)
+            count -= 1
+            return (models.labelText,
+                    models.textScreens,
+                    models.nameLabel,
+                    isChangeScreen)
         case .nextVC:
             currentState = State.two
-            return (nil, nil, nil, true)
+            return (nil, nil, nil, isChangeScreen)
         }
     }
 }

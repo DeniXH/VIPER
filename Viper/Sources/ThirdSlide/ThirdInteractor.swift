@@ -17,6 +17,5 @@ class ThirdInteractor {
 
 extension ThirdInteractor: ThirdInteractorProtocol {
     func getDataFromEntity(entity: ThirdEntity) {
-
     }
 }

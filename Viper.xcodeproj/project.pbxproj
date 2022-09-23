@@ -26,7 +26,6 @@
 		92919A0928DCA8DC00BAAEF6 /* ThirteenthSlideModelViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92919A0828DCA8DC00BAAEF6 /* ThirteenthSlideModelViews.swift */; };
 		92919A0B28DCB1AF00BAAEF6 /* BaseControllerElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92919A0A28DCB1AF00BAAEF6 /* BaseControllerElements.swift */; };
 		92919A0D28DCB37D00BAAEF6 /* LabelLeftControllerElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92919A0C28DCB37D00BAAEF6 /* LabelLeftControllerElements.swift */; };
-		9292623528DC5A6F00D9DC67 /* FourthModelViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292623428DC5A6F00D9DC67 /* FourthModelViews.swift */; };
 		9292623A28DC6CFE00D9DC67 /* TenthSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292623928DC6CFE00D9DC67 /* TenthSlideViewController.swift */; };
 		9292623C28DC6D2500D9DC67 /* TenthSlideInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292623B28DC6D2500D9DC67 /* TenthSlideInteractor.swift */; };
 		9292623E28DC6D4800D9DC67 /* TenthSlidePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292623D28DC6D4800D9DC67 /* TenthSlidePresenter.swift */; };
@@ -98,7 +97,6 @@
 		5958958328D4C1770083BCCF /* MainSlideEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideEntity.swift; sourceTree = "<group>"; };
 		5958958828D4C1890083BCCF /* MainSlideRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideRouter.swift; sourceTree = "<group>"; };
 		5958959328D518010083BCCF /* MainSlideModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideModuleBuilder.swift; sourceTree = "<group>"; };
-		929199F828DC742E00BAAEF6 /* Viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Viper.app; path = "/Users/denis/Viper/build/Debug-iphoneos/Viper.app"; sourceTree = "<absolute>"; };
 		929199FC28DCA66200BAAEF6 /* ThirteenthSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthSlideViewController.swift; sourceTree = "<group>"; };
 		929199FE28DCA81000BAAEF6 /* ThirteenthSlideInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthSlideInteractor.swift; sourceTree = "<group>"; };
 		92919A0028DCA83400BAAEF6 /* ThirteenthSlidePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthSlidePresenter.swift; sourceTree = "<group>"; };
@@ -108,7 +106,9 @@
 		92919A0828DCA8DC00BAAEF6 /* ThirteenthSlideModelViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthSlideModelViews.swift; sourceTree = "<group>"; };
 		92919A0A28DCB1AF00BAAEF6 /* BaseControllerElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControllerElements.swift; sourceTree = "<group>"; };
 		92919A0C28DCB37D00BAAEF6 /* LabelLeftControllerElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelLeftControllerElements.swift; sourceTree = "<group>"; };
-		9292623428DC5A6F00D9DC67 /* FourthModelViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthModelViews.swift; sourceTree = "<group>"; };
+		92919A1628DDC70400BAAEF6 /* Viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92919A1728DDC70400BAAEF6 /* ViperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92919A1828DDC70400BAAEF6 /* ViperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9292623928DC6CFE00D9DC67 /* TenthSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthSlideViewController.swift; sourceTree = "<group>"; };
 		9292623B28DC6D2500D9DC67 /* TenthSlideInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthSlideInteractor.swift; sourceTree = "<group>"; };
 		9292623D28DC6D4800D9DC67 /* TenthSlidePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthSlidePresenter.swift; sourceTree = "<group>"; };
@@ -149,8 +149,6 @@
 		92F9B6FB28D88D780019EBAB /* ThirdEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdEntity.swift; sourceTree = "<group>"; };
 		92F9B6FD28D88D8B0019EBAB /* ThirdRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdRouter.swift; sourceTree = "<group>"; };
 		92F9B6FF28D88DA50019EBAB /* ThirdModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdModuleBuilder.swift; sourceTree = "<group>"; };
-		EC419B8B28DD0B6B004F7063 /* ViperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ViperTests.xctest; path = "/Users/denis/Viper/build/Debug-iphoneos/ViperTests.xctest"; sourceTree = "<absolute>"; };
-		EC419B8C28DD0B6B004F7063 /* ViperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ViperUITests.xctest; path = "/Users/denis/Viper/build/Debug-iphoneos/ViperUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +180,9 @@
 			isa = PBXGroup;
 			children = (
 				5958953428D49D660083BCCF /* Viper */,
+				92919A1628DDC70400BAAEF6 /* Viper.app */,
+				92919A1728DDC70400BAAEF6 /* ViperTests.xctest */,
+				92919A1828DDC70400BAAEF6 /* ViperUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -321,7 +322,6 @@
 				92F9B6EB28D783940019EBAB /* FourthEntity.swift */,
 				92F9B6ED28D783AD0019EBAB /* FourthRouter.swift */,
 				92F9B6EF28D783D00019EBAB /* FourthModuleBuilder.swift */,
-				9292623428DC5A6F00D9DC67 /* FourthModelViews.swift */,
 			);
 			path = FourthToNinthSlide;
 			sourceTree = "<group>";
@@ -366,7 +366,7 @@
 			);
 			name = Viper;
 			productName = Viper;
-			productReference = 929199F828DC742E00BAAEF6 /* Viper.app */;
+			productReference = 92919A1628DDC70400BAAEF6 /* Viper.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5958954728D49D720083BCCF /* ViperTests */ = {
@@ -384,7 +384,7 @@
 			);
 			name = ViperTests;
 			productName = ViperTests;
-			productReference = EC419B8B28DD0B6B004F7063 /* ViperTests.xctest */;
+			productReference = 92919A1728DDC70400BAAEF6 /* ViperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		5958955228D49D720083BCCF /* ViperUITests */ = {
@@ -402,7 +402,7 @@
 			);
 			name = ViperUITests;
 			productName = ViperUITests;
-			productReference = EC419B8C28DD0B6B004F7063 /* ViperUITests.xctest */;
+			productReference = 92919A1828DDC70400BAAEF6 /* ViperUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -502,7 +502,6 @@
 				9292624428DC6D9800D9DC67 /* TenthSlideModuleBuilder.swift in Sources */,
 				9292626028DC6FA400D9DC67 /* TwelthSlideModuleBuilder.swift in Sources */,
 				5958959428D518010083BCCF /* MainSlideModuleBuilder.swift in Sources */,
-				9292623528DC5A6F00D9DC67 /* FourthModelViews.swift in Sources */,
 				92F9B6FA28D88D600019EBAB /* ThirdPresenter.swift in Sources */,
 				92F9B6E628D783020019EBAB /* FourthViewController.swift in Sources */,
 				92919A0328DCA87100BAAEF6 /* ThirteenthSlideEntity.swift in Sources */,
