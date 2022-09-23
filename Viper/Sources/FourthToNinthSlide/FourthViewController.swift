@@ -29,34 +29,37 @@ class FourthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         setupHierarchy()
         setupLayout()
     }
 
     lazy var label: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "View"
-       label.font = .systemFont(ofSize: 15)
-       label.backgroundColor = .blue
-       label.textAlignment = .center
-       label.textColor = .white
-       return label
-   }()
+        label.textColor = .white
+        label.font = .boldSystemFont(ofSize: 80)
+        label.sizeToFit()
+        label.textAlignment = .left
+        return label
+    }()
 
     lazy var textLabel: UILabel = {
       let textLabel = UILabel()
-        textLabel.text = "показывает что скажет Презентер и передает ввод пользователя Презентеру"
-        textLabel.backgroundColor = .red
+        textLabel.text = "Показывает, что скажет Презентер и передает ввод пользователя презентеру"
+        textLabel.textColor = .white
+        textLabel.sizeToFit()
+        textLabel.font = .systemFont(ofSize: 20)
+        textLabel.numberOfLines = 0
         return textLabel
     }()
 
     lazy var symbolLabel: UILabel = {
         let label = UILabel()
         label.text = "V"
-        label.font = .systemFont(ofSize: 25)
-        label.backgroundColor = .cyan
-        label.textAlignment = .center
         label.textColor = .white
+        label.font = .boldSystemFont(ofSize: 400)
+        label.textAlignment = .center
         return label
     }()
 
@@ -79,11 +82,12 @@ class FourthViewController: UIViewController {
     @objc func buttonLeftPressed() {
         let nextStep = presenter?.getPreviosStep()
 
-        if nextStep?.2 != nil {
+        if nextStep?.3 != nil {
             dismiss(animated: true)
         } else {
-            label.text = nextStep?.0
+            label.text = nextStep?.2
             textLabel.text = nextStep?.1
+            symbolLabel.text = nextStep?.0
         }
     }
 
@@ -91,15 +95,16 @@ class FourthViewController: UIViewController {
     @objc func buttonRightPressed() {
         var nextStep = presenter?.getNextStep()
 
-        if nextStep?.2 != nil {
+        if nextStep?.3 != nil {
             let viewControllerSlide = TenthSlideModuleBuilder.build()
             // presenter.функция роутера, с параметром ввиде контроллера
             self.present(viewControllerSlide, animated: true)
         } else {
-            label.text = nextStep?.0
+            label.text = nextStep?.2
             textLabel.text = nextStep?.1
+            symbolLabel.text = nextStep?.0
         }
-        nextStep?.2 = nil
+        nextStep?.3 = nil
     }
 
 
@@ -112,7 +117,6 @@ class FourthViewController: UIViewController {
     }
 
     func setupLayout() {
-      //  imageView.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         symbolLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -120,18 +124,9 @@ class FourthViewController: UIViewController {
         buttonLeft.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-
-//            imageView.topAnchor.constraint(equalTo: view.topAnchor),
-//            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-
             label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            label.heightAnchor.constraint(equalToConstant: 100),
-//            label.widthAnchor.constraint(equalToConstant: 250),
-//            label.heightAnchor.constraint(equalToConstant: 1000),
 
             textLabel.topAnchor.constraint(equalTo: label.bottomAnchor),
             textLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),

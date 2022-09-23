@@ -27,10 +27,9 @@ class ThirdViewController: BaseControllerElements {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .magenta
+        view.backgroundColor = .black
         imageView.image = UIImage(named: "slide3") // установка пустой картинки
-        imageView.backgroundColor = .systemGreen
-        imageView.contentMode = .scaleToFill
+        label.text = "История"
     }
 
     @objc override func buttonRightPressed() {

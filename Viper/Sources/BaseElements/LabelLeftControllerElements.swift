@@ -27,15 +27,15 @@ class LabelLeftControllerElements: BaseControllerElements {
             buttonLeft.translatesAutoresizingMaskIntoConstraints = false
 
             NSLayoutConstraint.activate([
-                imageView.topAnchor.constraint(equalTo: label.bottomAnchor),
-                imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+                imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+                imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
                 imageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
                 imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
 
                 label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
                 label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-                label.widthAnchor.constraint(equalToConstant: 200),
-                label.heightAnchor.constraint(equalToConstant: 70),
+                label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+                label.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
 
                 buttonRight.topAnchor.constraint(equalTo: view.topAnchor),
                 buttonRight.bottomAnchor.constraint(equalTo: view.bottomAnchor),

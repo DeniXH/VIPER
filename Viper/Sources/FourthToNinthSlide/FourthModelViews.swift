@@ -10,4 +10,5 @@ import Foundation
 struct ModelViews {
     let labelsText: [String]
     let textScreens: [String]
+    let nameLabel: [String]
 }

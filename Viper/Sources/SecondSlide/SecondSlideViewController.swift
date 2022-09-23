@@ -29,11 +29,10 @@ class SecondSlideViewController: BaseControllerElements {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .black
         // происходит переопределение параметров imageView
         imageView.image = UIImage(named: "slide2") // установка пустой картинки
-        imageView.backgroundColor = .systemGreen
-        imageView.contentMode = .scaleToFill
+        label.text = "Настоящий VIPER выглядит так!"
     }
 
     @objc override internal func buttonRightPressed() {
@@ -60,8 +59,6 @@ class SecondSlideViewController: BaseControllerElements {
 
             label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            label.widthAnchor.constraint(equalToConstant: 200),
-            label.heightAnchor.constraint(equalToConstant: 70),
 
             buttonRight.topAnchor.constraint(equalTo: view.topAnchor),
             buttonRight.bottomAnchor.constraint(equalTo: view.bottomAnchor),

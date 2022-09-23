@@ -22,7 +22,6 @@ class BaseControllerElements: UIViewController {
 
      lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "slide1")
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         return imageView
@@ -30,18 +29,19 @@ class BaseControllerElements: UIViewController {
 
      lazy var label: UILabel = {
         let label = UILabel()
-        label.text = "Label"
-        label.font = .systemFont(ofSize: 15)
-        label.backgroundColor = .blue
-        label.textAlignment = .center
-        label.textColor = .white
+        label.text = ""
+         label.textColor = .white
+         label.textAlignment = .left
+         label.font = .boldSystemFont(ofSize: 35)
+         label.numberOfLines = 0
+         label.sizeToFit()
         return label
     }()
 
      lazy var buttonRight: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "tintRight"), for: .highlighted)
-        button.alpha = 0.4 // нужна будет)
+        button.alpha = 0.2 // нужна будет)
         button.addTarget(self, action: #selector(buttonRightPressed), for: .touchUpInside)
         return button
     }()
@@ -51,7 +51,7 @@ class BaseControllerElements: UIViewController {
      lazy var buttonLeft: UIButton = {
         let button = UIButton(type: .custom) // тип кастомный, нет серого выделения как в системной
         button.setImage(UIImage(named: "tintLeft"), for: .highlighted) // когда будет выделена будет картинка (for: .highlighted)
-        button.alpha = 0.4 // нужна будет)
+        button.alpha = 0.2 // нужна будет)
         button.addTarget(self, action: #selector(buttonLeftPressed), for: .touchUpInside)
         return button
     }()
@@ -82,8 +82,6 @@ class BaseControllerElements: UIViewController {
 
             label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            label.widthAnchor.constraint(equalToConstant: 200),
-            label.heightAnchor.constraint(equalToConstant: 70),
 
             buttonRight.topAnchor.constraint(equalTo: view.topAnchor),
             buttonRight.bottomAnchor.constraint(equalTo: view.bottomAnchor),
