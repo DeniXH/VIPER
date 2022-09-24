@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A8ACFDC28DF34200024A6A1 /* FinalSlidePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8ACFD528DF34200024A6A1 /* FinalSlidePresenter.swift */; };
-		3A8ACFDD28DF34200024A6A1 /* FinalSlideEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8ACFD628DF34200024A6A1 /* FinalSlideEntity.swift */; };
-		3A8ACFDF28DF34200024A6A1 /* FinalSlideRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8ACFD828DF34200024A6A1 /* FinalSlideRouter.swift */; };
-		3A8ACFE028DF34200024A6A1 /* FinalSlideInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8ACFD928DF34200024A6A1 /* FinalSlideInteractor.swift */; };
-		3A8ACFE128DF34200024A6A1 /* FinalSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8ACFDA28DF34200024A6A1 /* FinalSlideViewController.swift */; };
+		3A8ACFE928DF563A0024A6A1 /* FinalSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8ACFE428DF56390024A6A1 /* FinalSlideViewController.swift */; };
+		3A8ACFEA28DF563A0024A6A1 /* FinalSlideInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8ACFE528DF56390024A6A1 /* FinalSlideInteractor.swift */; };
+		3A8ACFEB28DF563A0024A6A1 /* FinalSlideEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8ACFE628DF56390024A6A1 /* FinalSlideEntity.swift */; };
+		3A8ACFEC28DF563A0024A6A1 /* FinalSlideRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8ACFE728DF56390024A6A1 /* FinalSlideRouter.swift */; };
+		3A8ACFED28DF563A0024A6A1 /* FinalSlidePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8ACFE828DF56390024A6A1 /* FinalSlidePresenter.swift */; };
 		5958953628D49D660083BCCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958953528D49D660083BCCF /* AppDelegate.swift */; };
 		5958953828D49D660083BCCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958953728D49D660083BCCF /* SceneDelegate.swift */; };
 		5958953A28D49D660083BCCF /* MainSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958953928D49D660083BCCF /* MainSlideViewController.swift */; };
@@ -80,13 +80,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A8ACFD528DF34200024A6A1 /* FinalSlidePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalSlidePresenter.swift; path = "../../../../VIPER-develop-2/Viper/Sources/ThirteenthSlide/FinalSlidePresenter.swift"; sourceTree = "<group>"; };
-		3A8ACFD628DF34200024A6A1 /* FinalSlideEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalSlideEntity.swift; path = "../../../../VIPER-develop-2/Viper/Sources/ThirteenthSlide/FinalSlideEntity.swift"; sourceTree = "<group>"; };
-		3A8ACFD828DF34200024A6A1 /* FinalSlideRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalSlideRouter.swift; path = "../../../../VIPER-develop-2/Viper/Sources/ThirteenthSlide/FinalSlideRouter.swift"; sourceTree = "<group>"; };
-		3A8ACFD928DF34200024A6A1 /* FinalSlideInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalSlideInteractor.swift; path = "../../../../VIPER-develop-2/Viper/Sources/ThirteenthSlide/FinalSlideInteractor.swift"; sourceTree = "<group>"; };
-		3A8ACFDA28DF34200024A6A1 /* FinalSlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalSlideViewController.swift; path = "../../../../VIPER-develop-2/Viper/Sources/ThirteenthSlide/FinalSlideViewController.swift"; sourceTree = "<group>"; };
-		3A93D65228DEDED900E2BCAB /* ViperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ViperTests.xctest; path = "/Users/anton/Downloads/VIPER-develop-3/build/Debug-iphoneos/ViperTests.xctest"; sourceTree = "<absolute>"; };
-		3A93D65328DEDED900E2BCAB /* ViperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ViperUITests.xctest; path = "/Users/anton/Downloads/VIPER-develop-3/build/Debug-iphoneos/ViperUITests.xctest"; sourceTree = "<absolute>"; };
+		3A8ACFE228DF541E0024A6A1 /* ViperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8ACFE328DF541E0024A6A1 /* ViperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8ACFE428DF56390024A6A1 /* FinalSlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSlideViewController.swift; sourceTree = "<group>"; };
+		3A8ACFE528DF56390024A6A1 /* FinalSlideInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSlideInteractor.swift; sourceTree = "<group>"; };
+		3A8ACFE628DF56390024A6A1 /* FinalSlideEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSlideEntity.swift; sourceTree = "<group>"; };
+		3A8ACFE728DF56390024A6A1 /* FinalSlideRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSlideRouter.swift; sourceTree = "<group>"; };
+		3A8ACFE828DF56390024A6A1 /* FinalSlidePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSlidePresenter.swift; sourceTree = "<group>"; };
 		5958953528D49D660083BCCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5958953728D49D660083BCCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5958953928D49D660083BCCF /* MainSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideViewController.swift; sourceTree = "<group>"; };
@@ -167,11 +167,11 @@
 		3A8ACFD328DF33C20024A6A1 /* FinalSlide */ = {
 			isa = PBXGroup;
 			children = (
-				3A8ACFDA28DF34200024A6A1 /* FinalSlideViewController.swift */,
-				3A8ACFD928DF34200024A6A1 /* FinalSlideInteractor.swift */,
-				3A8ACFD528DF34200024A6A1 /* FinalSlidePresenter.swift */,
-				3A8ACFD628DF34200024A6A1 /* FinalSlideEntity.swift */,
-				3A8ACFD828DF34200024A6A1 /* FinalSlideRouter.swift */,
+				3A8ACFE628DF56390024A6A1 /* FinalSlideEntity.swift */,
+				3A8ACFE528DF56390024A6A1 /* FinalSlideInteractor.swift */,
+				3A8ACFE828DF56390024A6A1 /* FinalSlidePresenter.swift */,
+				3A8ACFE728DF56390024A6A1 /* FinalSlideRouter.swift */,
+				3A8ACFE428DF56390024A6A1 /* FinalSlideViewController.swift */,
 			);
 			path = FinalSlide;
 			sourceTree = "<group>";
@@ -181,6 +181,8 @@
 			children = (
 				5958953428D49D660083BCCF /* Viper */,
 				92919A1628DDC70400BAAEF6 /* Viper.app */,
+				3A8ACFE228DF541E0024A6A1 /* ViperTests.xctest */,
+				3A8ACFE328DF541E0024A6A1 /* ViperUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -380,7 +382,7 @@
 			);
 			name = ViperTests;
 			productName = ViperTests;
-			productReference = 3A93D65228DEDED900E2BCAB /* ViperTests.xctest */;
+			productReference = 3A8ACFE228DF541E0024A6A1 /* ViperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		5958955228D49D720083BCCF /* ViperUITests */ = {
@@ -398,7 +400,7 @@
 			);
 			name = ViperUITests;
 			productName = ViperUITests;
-			productReference = 3A93D65328DEDED900E2BCAB /* ViperUITests.xctest */;
+			productReference = 3A8ACFE328DF541E0024A6A1 /* ViperUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -481,14 +483,17 @@
 				92F9B6DD28D7593F0019EBAB /* SecondSlidePresenter.swift in Sources */,
 				92F9B6F628D88D320019EBAB /* ThirdViewController.swift in Sources */,
 				5958957F28D4C1120083BCCF /* MainSlidePresenter.swift in Sources */,
+				3A8ACFEC28DF563A0024A6A1 /* FinalSlideRouter.swift in Sources */,
 				92F9B6DB28D7592B0019EBAB /* SecondSlideInteractor.swift in Sources */,
 				5958958428D4C1770083BCCF /* MainSlideEntity.swift in Sources */,
 				92919A0D28DCB37D00BAAEF6 /* LabelLeftControllerElements.swift in Sources */,
 				9292624228DC6D7A00D9DC67 /* TenthSlideRouter.swift in Sources */,
+				3A8ACFEA28DF563A0024A6A1 /* FinalSlideInteractor.swift in Sources */,
 				9292625028DC6E7500D9DC67 /* EleventhSlideRouter.swift in Sources */,
 				9292624C28DC6E1900D9DC67 /* EleventhSlidePresenter.swift in Sources */,
 				92F9B6EA28D783560019EBAB /* FourthPresenter.swift in Sources */,
 				92919A0528DCA89200BAAEF6 /* ThirteenthSlideRouter.swift in Sources */,
+				3A8ACFED28DF563A0024A6A1 /* FinalSlidePresenter.swift in Sources */,
 				92919A1B28DE4A3900BAAEF6 /* BaseTypeAlias.swift in Sources */,
 				3A8ACFDF28DF34200024A6A1 /* FinalSlideRouter.swift in Sources */,
 				3A8ACFDC28DF34200024A6A1 /* FinalSlidePresenter.swift in Sources */,
@@ -501,7 +506,7 @@
 				92F9B6FE28D88D8B0019EBAB /* ThirdRouter.swift in Sources */,
 				92F9B6FA28D88D600019EBAB /* ThirdPresenter.swift in Sources */,
 				92F9B6E628D783020019EBAB /* FourthViewController.swift in Sources */,
-				3A8ACFE028DF34200024A6A1 /* FinalSlideInteractor.swift in Sources */,
+				3A8ACFEB28DF563A0024A6A1 /* FinalSlideEntity.swift in Sources */,
 				92919A0328DCA87100BAAEF6 /* ThirteenthSlideEntity.swift in Sources */,
 				9292625628DC6EFC00D9DC67 /* TwelthSlideViewController.swift in Sources */,
 				9292624E28DC6E5E00D9DC67 /* EleventhSlideEntity.swift in Sources */,
@@ -518,6 +523,7 @@
 				9292623C28DC6D2500D9DC67 /* TenthSlideInteractor.swift in Sources */,
 				9292625A28DC6F3700D9DC67 /* TwelthSlidePresenter.swift in Sources */,
 				5958953628D49D660083BCCF /* AppDelegate.swift in Sources */,
+				3A8ACFE928DF563A0024A6A1 /* FinalSlideViewController.swift in Sources */,
 				9292623A28DC6CFE00D9DC67 /* TenthSlideViewController.swift in Sources */,
 				92F9B6FC28D88D780019EBAB /* ThirdEntity.swift in Sources */,
 				92F9B6EE28D783AD0019EBAB /* FourthRouter.swift in Sources */,
@@ -693,6 +699,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3L65F6AAP4;
 				INFOPLIST_FILE = Viper/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -712,6 +719,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3L65F6AAP4;
 				INFOPLIST_FILE = Viper/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
