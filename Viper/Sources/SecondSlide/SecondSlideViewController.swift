@@ -12,9 +12,10 @@ import UIKit
 // должна быть ссылка на презентер
 
 protocol SecondSlideViewProtocol: AnyObject {
+    func setView(image: UIImageView, label: UILabel)
 }
 
-class SecondSlideViewController: BaseControllerElements {
+class SecondSlideViewController: BaseControllerElements, SecondSlideViewProtocol {
 
     var presenter: SecondSlidePresenterProtocol?
 
@@ -27,22 +28,32 @@ class SecondSlideViewController: BaseControllerElements {
         fatalError("init(coder:) has not been implemented")
     }
 
+// MARK: - Lifecicle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         // происходит переопределение параметров imageView
-        imageView.image = UIImage(named: "slide2") // установка пустой картинки
-        label.text = "Настоящий VIPER выглядит так!"
+        setView(image: imageView, label: label)
+    }
+
+// MARK: - functions
+
+    func setView(image: UIImageView, label: UILabel) {
+        let screenSet = presenter?.setScreenParameters()
+        image.image = UIImage(named: "\(screenSet?.imageName ?? "")")
+        label.text = screenSet?.labelText
     }
 
     @objc override internal func buttonRightPressed() {
-        let viewControllerSlide = ThirdModuleBuilder.build()
-        self.present(viewControllerSlide, animated: true)
+        presenter?.openNextModule(view: self)
     }
 
     @objc override internal func buttonLeftPressed() {
         dismiss(animated: true) // возвращает она предыдущее окно
     }
+
+// MARK: - Layout settings
 
     override func setupLayout() {
 

@@ -10,7 +10,7 @@ import Foundation
 // слабая ссылка на презентер
 
 protocol FourthRouterProtocol: AnyObject {
-
+    
 }
 
 class FourthRouter: FourthRouterProtocol {

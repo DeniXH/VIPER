@@ -9,19 +9,25 @@ import Foundation
 import UIKit
 
 protocol ThirdPresenterProtocol: AnyObject {
+    func openNextModule(view: UIViewController)
+    func setScreenParameters() -> ScreenSet
 }
 
 class ThirdPresenter: ThirdPresenterProtocol {
     weak var view: ThirdViewProtocol?
     var interactor: ThirdInteractorProtocol
     var router: ThirdRouterProtocol
-
+    
     init(interactor: ThirdInteractorProtocol, router: ThirdRouterProtocol) {
         self.interactor = interactor
         self.router = router
     }
-
-    func changeInfo(info: [String]) {
-       // router.changeData(info: info)
+    
+    func setScreenParameters() -> ScreenSet {
+        return interactor.getContentScreens()
+    }
+    
+    func openNextModule(view: UIViewController) {
+        router.openNextModule(view: view)
     }
 }

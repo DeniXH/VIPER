@@ -8,14 +8,24 @@
 import Foundation
 
 protocol ThirdInteractorProtocol: AnyObject {
-    func getDataFromEntity(entity: ThirdEntity)
+    func getContentScreens() -> ScreenSet
 }
 
-class ThirdInteractor {
+class ThirdInteractor: ThirdInteractorProtocol {
     weak var presenter: ThirdPresenterProtocol?
-}
-
-extension ThirdInteractor: ThirdInteractorProtocol {
-    func getDataFromEntity(entity: ThirdEntity) {
+    var entity: ThirdEntityProtocol?
+    
+    init(entity: ThirdEntityProtocol) {
+        self.entity = entity
+    }
+    
+    func getContentScreens() -> ScreenSet {
+        var screen: ScreenSet
+        screen.imageName = ""
+        screen.labelText = ""
+        if let settings = entity?.screenSettingsThirdScreen() {
+            screen = settings
+        }
+        return screen
     }
 }

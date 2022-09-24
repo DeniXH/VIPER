@@ -11,7 +11,7 @@ import UIKit
 // слабая ссылка на презентер
 
 protocol MainSlideRouterProtocol: AnyObject {
-    func openNextModule(vc: UIViewController)
+    func openNextModule(view: UIViewController)
 }
 
 class MainSlideRouter {
@@ -19,9 +19,9 @@ class MainSlideRouter {
 }
 
 extension MainSlideRouter: MainSlideRouterProtocol {
-    func openNextModule(vc: UIViewController) {
+    func openNextModule(view: UIViewController) {
         let viewControllerSlide = SecondSlideModuleBuilder.build()
         // presenter.функция роутера, с параметром ввиде контроллера
-        vc.present(viewControllerSlide, animated: true)
+        view.present(viewControllerSlide, animated: true)
     }
 }

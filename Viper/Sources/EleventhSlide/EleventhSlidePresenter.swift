@@ -10,18 +10,23 @@ import UIKit
 
 protocol EleventhSlidePresenterProtocol: AnyObject {
     func openNextModule(view: UIViewController)
+    func setScreenParameters() -> ScreenSet
 }
 
 class EleventhSlidePresenter: EleventhSlidePresenterProtocol {
     weak var view: EleventhSlideViewProtocol?
     var interactor: EleventhSlideInteractorProtocol
     var router: EleventhSlideRouterProtocol
-
+    
     init(interactor: EleventhSlideInteractorProtocol, router: EleventhSlideRouterProtocol) {
         self.interactor = interactor
         self.router = router
     }
-
+    
+    func setScreenParameters() -> ScreenSet {
+        return interactor.getContentScreens()
+    }
+    
     func openNextModule(view: UIViewController) {
         router.openNextModule(view: view)
     }

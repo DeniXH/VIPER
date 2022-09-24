@@ -13,7 +13,8 @@ import UIKit
 // сильная ссылка на роутер
 
 protocol MainSlidePresenterProtocol: AnyObject {
-    func openNextModule(vc: UIViewController)
+    func openNextModule(view: UIViewController)
+    func setScreenParameters() -> ScreenSet
 }
 
 class MainSlidePresenter: MainSlidePresenterProtocol {
@@ -25,8 +26,12 @@ class MainSlidePresenter: MainSlidePresenterProtocol {
         self.interactor = interactor
         self.router = router
     }
-
-    func openNextModule(vc: UIViewController) {
-        router.openNextModule(vc: vc)
+    
+    func setScreenParameters() -> ScreenSet {
+        return interactor.getContentScreens()
+    }
+    
+    func openNextModule(view: UIViewController) {
+        router.openNextModule(view: view)
     }
 }

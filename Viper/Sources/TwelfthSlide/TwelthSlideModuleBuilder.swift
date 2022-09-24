@@ -10,11 +10,12 @@ import UIKit
 
 class TwelthSlideModuleBuilder {
     static func build() -> TwelthSlideViewController {
-        let interactor = TwelthSlideInteractor()
+        let entity = TwelthSlideEntity()
+        let interactor = TwelthSlideInteractor(entity: entity)
         let router = TwelthSlideRouter()
         let presenter = TwelthSlidePresenter(interactor: interactor, router: router)
         let viewController = TwelthSlideViewController(presenter: presenter)
-        presenter.view = viewController as? TwelthSlideViewProtocol
+        presenter.view = viewController
         interactor.presenter = presenter
         router.presenter = presenter
         return viewController

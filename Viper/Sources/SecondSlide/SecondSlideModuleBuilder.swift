@@ -9,11 +9,12 @@ import UIKit
 
 class SecondSlideModuleBuilder {
     static func build() -> SecondSlideViewController {
-        let interactor = SecondSlideInteractor()
+        let entity = SecondSlideEntity()
+        let interactor = SecondSlideInteractor(entity: entity)
         let router = SecondSlideRouter()
         let presenter = SecondSlidePresenter(interactor: interactor, router: router)
         let viewController = SecondSlideViewController(presenter: presenter)
-        presenter.view = viewController as? SecondSlideViewProtocol
+        presenter.view = viewController
         interactor.presenter = presenter
         router.presenter = presenter
         return viewController

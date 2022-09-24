@@ -22,7 +22,6 @@ class MainControllerElements: UIViewController {
 
      lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "slide1")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
@@ -30,10 +29,6 @@ class MainControllerElements: UIViewController {
 
     lazy var label: UILabel = {
         let label = UILabel()
-        label.text = """
-                      Ты думал так выглядит настоящий
-                      VIPER ?
-                      """
         label.textColor = .white
         label.textAlignment = .left
         label.font = .boldSystemFont(ofSize: 35)
@@ -49,6 +44,8 @@ class MainControllerElements: UIViewController {
         button.addTarget(self, action: #selector(buttonRightPressed), for: .touchUpInside)
         return button
     }()
+
+// MARK: - functions
 
     @objc func buttonRightPressed() { }
 

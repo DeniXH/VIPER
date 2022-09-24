@@ -12,25 +12,30 @@ import Foundation
 // сильная ссылка на роутер
 
 protocol FourthPresenterProtocol: AnyObject {
-    func getNextStep() -> (String?, String?, String?, Bool?)
-    func getPreviosStep() -> (String?, String?, String?, Bool?)
+    func getNextStep() -> ModelFromInteractor
+    func getPreviosStep() -> ModelFromInteractor
+    func firstSlide() -> ModelFromInteractor
 }
 
 class FourthPresenter: FourthPresenterProtocol {
     weak var view: FourthViewProtocol?
     var interactor: FourthInteractorProtocol
     var router: FourthRouterProtocol
-
+    
     init(interactor: FourthInteractorProtocol, router: FourthRouterProtocol) {
         self.interactor = interactor
         self.router = router
     }
-
-    func getNextStep() -> (String?, String?, String?, Bool?) {
+    
+    func getNextStep() -> ModelFromInteractor {
         return interactor.nextStepView()
     }
-
-    func getPreviosStep() -> (String?, String?, String?, Bool?) {
+    
+    func getPreviosStep() -> ModelFromInteractor {
         return interactor.previosStepView()
+    }
+    
+    func firstSlide() -> ModelFromInteractor {
+        return interactor.firstView()
     }
 }

@@ -8,8 +8,24 @@
 import Foundation
 
 protocol EleventhSlideInteractorProtocol: AnyObject {
+    func getContentScreens() -> ScreenSet
 }
 
 class EleventhSlideInteractor: EleventhSlideInteractorProtocol {
     weak var presenter: EleventhSlidePresenterProtocol?
+    var entity: EleventhSlideEntityProtocol?
+    
+    init(entity: EleventhSlideEntityProtocol) {
+        self.entity = entity
+    }
+    
+    func getContentScreens() -> ScreenSet {
+        var screen: ScreenSet
+        screen.imageName = ""
+        screen.labelText = ""
+        if let settings = entity?.screenSettingsEleventhScreen() {
+            screen = settings
+        }
+        return screen
+    }
 }

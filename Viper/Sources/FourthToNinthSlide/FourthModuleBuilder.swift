@@ -9,7 +9,8 @@ import UIKit
 
 class FourthModuleBuilder {
     static func build() -> FourthViewController {
-        let interactor = FourthInteractor()
+        let entity = FourthSlideEntity()
+        let interactor = FourthInteractor(entity: entity)
         let router = FourthRouter()
         let presenter = FourthPresenter(interactor: interactor, router: router)
         let viewController = FourthViewController(presenter: presenter)

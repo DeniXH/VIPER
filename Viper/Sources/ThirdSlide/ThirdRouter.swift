@@ -9,8 +9,7 @@ import Foundation
 import UIKit
 
 protocol ThirdRouterProtocol: AnyObject {
-   func openNextModule(view: UIViewController)
-  // func changeData(info: )
+    func openNextModule(view: UIViewController)
 }
 
 class ThirdRouter {
@@ -19,7 +18,7 @@ class ThirdRouter {
 
 extension ThirdRouter: ThirdRouterProtocol {
     func openNextModule(view: UIViewController) {
-        let viewControllerSymbols = ThirdModuleBuilder.build()
+        let viewControllerSymbols = FourthModuleBuilder.build()
         view.present(viewControllerSymbols, animated: true)
     }
 }

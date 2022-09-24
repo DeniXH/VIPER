@@ -18,7 +18,7 @@ class TwelthSlideRouter {
 
 extension TwelthSlideRouter: TwelthSlideRouterProtocol {
     func openNextModule(view: UIViewController) {
-        let viewControllerSymbols = MainSlideModuleBuilder.build()
+        let viewControllerSymbols = ThirteenthSlideModuleBuilder.build()
         view.present(viewControllerSymbols, animated: true)
     }
 }
