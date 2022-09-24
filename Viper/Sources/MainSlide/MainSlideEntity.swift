@@ -1,38 +1,50 @@
 //
-//  Entity.swift
+//  MainSlideEntity.swift
 //  Viper
 //
 //  Created by Denis on 16.09.2022.
 //
 
 import Foundation
-import UIKit
+
 // протокол
 // слабая ссылка интерактор
+
+// MARK: - EntityProtocol
+
 protocol MainSlideEntityProtocol {
-    func screenSettingsMainScreen() -> ScreenSet
+    func screenSettingsMainScreen() -> SetContentMainScreen
 }
 
-class MainSlideEntity: MainSlideEntityProtocol {
+// MARK: - Entity
+
+final class MainSlideEntity: MainSlideEntityProtocol {
+    
+    // MARK: - References
+    
     weak var interactor: MainSlideInteractorProtocol?
     
-    func screenSettingsMainScreen() -> ScreenSet {
+    // MARK: - Model Init
+    
+    func screenSettingsMainScreen() -> SetContentMainScreen {
         SetContentMainScreen.getSettingsMainScreen()
     }
 }
+
+// MARK: - ModelStruct
 
 struct SetContentMainScreen {
     let pictureSlide: String
     let labelText: String
 }
 
-extension SetContentMainScreen {
-    static func getSettingsMainScreen() -> ScreenSet {
-        let contentScreen = SetContentScreen(pictureSlide: "slide1", labelText: """
+// MARK: - Extension
+
+private extension SetContentMainScreen {
+    static func getSettingsMainScreen() -> SetContentMainScreen {
+        SetContentMainScreen(pictureSlide: "slide1", labelText: """
                       Ты думал так выглядит настоящий
-                      VIPER ?
+                      VIPER?
                       """)
-        let content = ScreenSet(contentScreen.pictureSlide, contentScreen.labelText)
-        return content
     }
 }

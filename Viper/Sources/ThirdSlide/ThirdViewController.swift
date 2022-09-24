@@ -5,16 +5,23 @@
 //  Created by Денис Холодков on 19.09.2022.
 //
 
-import Foundation
 import UIKit
+
+// MARK: - ViewProtocol
 
 protocol ThirdViewProtocol: AnyObject {
     func setView(image: UIImageView, label: UILabel)
 }
 
-class ThirdViewController: BaseControllerElements, ThirdViewProtocol {
+// MARK: - ViewController
+
+final class ThirdViewController: BaseControllerElements, ThirdViewProtocol {
+    
+    // MARK: - Reference
     
     var presenter: ThirdPresenterProtocol?
+    
+    // MARK: - Initializers
     
     init(presenter: ThirdPresenterProtocol) {
         self.presenter = presenter
@@ -25,23 +32,27 @@ class ThirdViewController: BaseControllerElements, ThirdViewProtocol {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setView(image: UIImageView, label: UILabel) {
-        let screenSet = presenter?.setScreenParameters()
-        image.image = UIImage(named: "\(screenSet?.imageName ?? "")")
-        label.text = screenSet?.labelText
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         setView(image: imageView, label: label)
     }
     
+    // MARK: - Setup
+    
+    func setView(image: UIImageView, label: UILabel) {
+        guard let screenSet = presenter?.setScreenParameters() else { return }
+        image.image = UIImage(named: screenSet.imageName)
+        label.text = screenSet.labelText
+    }
+    
+    // MARK: - Actions
+    
     @objc override internal func buttonRightPressed() {
         presenter?.openNextModule(view: self)
     }
     
     @objc override func buttonLeftPressed() {
-        dismiss(animated: true) // возвращает она предыдущее окно
+        dismiss(animated: true) // Возвращает предыдущее окно
     }
 }

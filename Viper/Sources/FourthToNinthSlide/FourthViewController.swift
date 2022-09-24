@@ -1,27 +1,34 @@
 //
-//  ThirdViewController.swift
+//  FourthViewController.swift
 //  Viper
 //
 //  Created by Денис Холодков on 18.09.2022.
 //
 
-import Foundation
 import UIKit
 
 // должен быть протокол
 // должна быть ссылка на презентер
 
+// MARK: - ViewProtocol
+
 protocol FourthViewProtocol: AnyObject {
+    func setupView(model: ModelFromInteractor)
 }
 
-class FourthViewController: UIViewController {
+// MARK: - ViewController
+
+final class FourthViewController: UIViewController, FourthViewProtocol {
+    
+    // MARK: - Presenter
     
     var presenter: FourthPresenterProtocol?
+    
+    // MARK: - Initializers
     
     init(presenter: FourthPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
-        setupView(presenter: presenter)
     }
     
     required init?(coder: NSCoder) {
@@ -31,11 +38,14 @@ class FourthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        buttonRightPressed()
         setupHierarchy()
         setupLayout()
     }
     
-    lazy var label: UILabel = {
+    // MARK: - Elements
+    
+    private lazy var label: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.font = .boldSystemFont(ofSize: 80)
@@ -44,7 +54,7 @@ class FourthViewController: UIViewController {
         return label
     }()
     
-    lazy var textLabel: UILabel = {
+    private lazy var textLabel: UILabel = {
         let textLabel = UILabel()
         textLabel.textColor = .white
         textLabel.sizeToFit()
@@ -53,7 +63,7 @@ class FourthViewController: UIViewController {
         return textLabel
     }()
     
-    lazy var symbolLabel: UILabel = {
+    private lazy var symbolLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.font = .boldSystemFont(ofSize: 400)
@@ -61,58 +71,31 @@ class FourthViewController: UIViewController {
         return label
     }()
     
-    lazy var buttonRight: UIButton = {
+    private lazy var buttonRight: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "tintRight"), for: .highlighted)
-        button.alpha = 0.4 // нужна будет)
+        button.alpha = 0.4
         button.addTarget(self, action: #selector(buttonRightPressed), for: .touchUpInside)
         return button
     }()
     
-    lazy var buttonLeft: UIButton = {
-        let button = UIButton(type: .custom) // тип кастомный, нет серого выделения как в системной
-        button.setImage(UIImage(named: "tintLeft"), for: .highlighted) // когда будет выделена будет картинка (for: .highlighted)
-        button.alpha = 0.4 // нужна будет)
+    private lazy var buttonLeft: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "tintLeft"), for: .highlighted)
+        button.alpha = 0.4
         button.addTarget(self, action: #selector(buttonLeftPressed), for: .touchUpInside)
         return button
     }()
     
-    @objc func buttonLeftPressed() {
-        let nextStep = presenter?.getPreviosStep()
-        
-        if nextStep?.3 != nil {
-            dismiss(animated: true)
-        } else {
-            label.text = nextStep?.nameLabel
-            textLabel.text = nextStep?.textScreens
-            symbolLabel.text = nextStep?.symbolLabelText
-        }
-    }
+    // MARK: - Setup
     
-    // функция правой кнопки
-    @objc func buttonRightPressed() {
-        var nextStep = presenter?.getNextStep()
-        
-        if nextStep?.isChangeScreen != nil {
-            let viewControllerSlide = TenthSlideModuleBuilder.build()
-            // presenter.функция роутера, с параметром ввиде контроллера
-            self.present(viewControllerSlide, animated: true)
-        } else {
-            label.text = nextStep?.nameLabel
-            textLabel.text = nextStep?.textScreens
-            symbolLabel.text = nextStep?.symbolLabelText
-        }
-        nextStep?.isChangeScreen = nil
-    }
-    
-    func setupView(presenter: FourthPresenterProtocol) {
-        let model = presenter.firstSlide()
+    func setupView(model: ModelFromInteractor) {
         label.text = model.nameLabel
         textLabel.text = model.textScreens
         symbolLabel.text = model.symbolLabelText
     }
     
-    func setupHierarchy() {
+    private func setupHierarchy() {
         view.addSubview(label)
         view.addSubview(textLabel)
         view.addSubview(symbolLabel)
@@ -120,7 +103,7 @@ class FourthViewController: UIViewController {
         view.addSubview(buttonRight)
     }
     
-    func setupLayout() {
+    private func setupLayout() {
         label.translatesAutoresizingMaskIntoConstraints = false
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         symbolLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -152,5 +135,15 @@ class FourthViewController: UIViewController {
             buttonLeft.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             buttonLeft.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 60)
         ])
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func buttonLeftPressed() {
+        presenter?.buttonLeftPressed()
+    }
+    
+    @objc private func buttonRightPressed() {
+        presenter?.buttonRightPressed()
     }
 }

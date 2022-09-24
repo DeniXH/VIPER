@@ -7,25 +7,31 @@
 
 import Foundation
 
+// MARK: - InteractorProtocol
+
 protocol TenthSlideInteractorProtocol: AnyObject {
     func getContentScreens() -> ScreenSet
 }
 
-class TenthSlideInteractor: TenthSlideInteractorProtocol {
+// MARK: - Interactor
+
+final class TenthSlideInteractor: TenthSlideInteractorProtocol {
+    
+    // MARK: - References
+    
     weak var presenter: TenthSlidePresenterProtocol?
     var entity: TenthSlideEntityProtocol?
+    
+    // MARK: - Initializer
     
     init(entity: TenthSlideEntityProtocol) {
         self.entity = entity
     }
     
+    // MARK: - Entity Request
+    
     func getContentScreens() -> ScreenSet {
-        var screen: ScreenSet
-        screen.imageName = ""
-        screen.labelText = ""
-        if let settings = entity?.screenSettingsTenthScreen() {
-            screen = settings
-        }
-        return screen
+        guard let model = entity?.screenSettingsTenthScreen() else { return (imageName: "", labelText: "") }
+        return (model.pictureSlide, model.labelText)
     }
 }

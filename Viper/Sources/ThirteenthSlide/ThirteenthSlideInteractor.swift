@@ -7,25 +7,31 @@
 
 import Foundation
 
+// MARK: - InteractorProtocol
+
 protocol ThirteenthSlideInteractorProtocol: AnyObject {
     func getContentScreens() -> ScreenSet
 }
 
-class ThirteenthSlideInteractor: ThirteenthSlideInteractorProtocol {
+// MARK: - Interactor
+
+final class ThirteenthSlideInteractor: ThirteenthSlideInteractorProtocol {
+    
+    // MARK: - Reference
+    
     weak var presenter: ThirteenthSlidePresenterProtocol?
     var entity: ThirteenthSlideEntityProtocol?
+    
+    // MARK: - Initializer
     
     init(entity: ThirteenthSlideEntityProtocol) {
         self.entity = entity
     }
     
+    // MARK: - Entity Request
+    
     func getContentScreens() -> ScreenSet {
-        var screen: ScreenSet
-        screen.imageName = ""
-        screen.labelText = ""
-        if let settings = entity?.screenSettingsThirteenthScreen() {
-            screen = settings
-        }
-        return screen
+        guard let model = entity?.screenSettingsThirteenthScreen() else { return (imageName: "", labelText: "") }
+        return (model.pictureSlide, model.labelText)
     }
 }

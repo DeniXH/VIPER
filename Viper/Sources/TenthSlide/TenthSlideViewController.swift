@@ -5,16 +5,23 @@
 //  Created by Денис Холодков on 22.09.2022.
 //
 
-import Foundation
 import UIKit
+
+// MARK: - ViewProtocol
 
 protocol TenthSlideViewProtocol: AnyObject {
     func setView(image: UIImageView, label: UILabel)
 }
 
-class TenthSlideViewController: BaseControllerElements, TenthSlideViewProtocol {
+// MARK: - ViewController
+
+final class TenthSlideViewController: BaseControllerElements, TenthSlideViewProtocol {
+    
+    // MARK: - Reference
     
     var presenter: TenthSlidePresenterProtocol?
+    
+    // MARK: - Initializer
     
     init(presenter: TenthSlidePresenterProtocol) {
         self.presenter = presenter
@@ -25,17 +32,21 @@ class TenthSlideViewController: BaseControllerElements, TenthSlideViewProtocol {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setView(image: UIImageView, label: UILabel) {
-        let screenSet = presenter?.setScreenParameters()
-        image.image = UIImage(named: "\(screenSet?.imageName ?? "")")
-        label.text = screenSet?.labelText
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         setView(image: imageView, label: label)
     }
+    
+    // MARK: - Setup
+    
+    func setView(image: UIImageView, label: UILabel) {
+        guard let model = presenter?.setScreenParameters() else { return }
+        image.image = UIImage(named: model.imageName)
+        label.text = model.labelText
+    }
+    
+    // MARK: - Actions
     
     @objc override internal func buttonRightPressed() {
         presenter?.openNextModule(view: self)
@@ -45,4 +56,3 @@ class TenthSlideViewController: BaseControllerElements, TenthSlideViewProtocol {
         dismiss(animated: true) // возвращает она предыдущее окно
     }
 }
-

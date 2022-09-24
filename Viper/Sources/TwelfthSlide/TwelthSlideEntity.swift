@@ -7,27 +7,38 @@
 
 import Foundation
 
+// MARK: - EntityProtocol
+
 protocol TwelthSlideEntityProtocol {
-    func screenSettingsTwelthScreen() -> ScreenSet
+    func screenSettingsTwelthScreen() -> SetContentTwelthScreen
 }
 
-class TwelthSlideEntity: TwelthSlideEntityProtocol {
+// MARK: - Entity
+
+final class TwelthSlideEntity: TwelthSlideEntityProtocol {
+    
+    // MARK: - Reference
+    
     weak var interactor: TwelthSlideInteractorProtocol?
     
-    func screenSettingsTwelthScreen() -> ScreenSet {
+    // MARK: - Model Init
+    
+    func screenSettingsTwelthScreen() -> SetContentTwelthScreen {
         SetContentTwelthScreen.getSettingsTwelthScreen()
     }
 }
+
+// MARK: - Screen Model
 
 struct SetContentTwelthScreen {
     let pictureSlide: String
     let labelText: String
 }
 
-extension SetContentTwelthScreen {
-    static func getSettingsTwelthScreen() -> ScreenSet {
-        let contentScreen = SetContentScreen(pictureSlide: "slide11", labelText: "Состав одного модуля")
-        let content = ScreenSet(contentScreen.pictureSlide, contentScreen.labelText)
-        return content
+// MARK: - Extension
+
+private extension SetContentTwelthScreen {
+    static func getSettingsTwelthScreen() -> SetContentTwelthScreen {
+        SetContentTwelthScreen(pictureSlide: "slide11", labelText: "Состав одного модуля")
     }
 }

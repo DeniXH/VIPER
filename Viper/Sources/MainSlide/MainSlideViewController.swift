@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainSlideViewController.swift
 //  Viper
 //
 //  Created by Denis on 16.09.2022.
@@ -10,13 +10,21 @@ import UIKit
 // должен быть протокол
 // должна быть ссылка на презентер
 
+// MARK: - ViewProtocol
+
 protocol MainSlideViewProtocol: AnyObject {
-    func setView(image: UIImageView, label: UILabel)
+    func setView(model: ScreenSet)
 }
 
-class MainSlideViewController: MainControllerElements, MainSlideViewProtocol {
+// MARK: - ViewController
+
+final class MainSlideViewController: MainControllerElements, MainSlideViewProtocol {
+    
+    // MARK: - Reference
     
     var presenter: MainSlidePresenterProtocol?
+    
+    // MARK: - Initializer
     
     init(presenter: MainSlidePresenterProtocol) {
         self.presenter = presenter
@@ -27,20 +35,23 @@ class MainSlideViewController: MainControllerElements, MainSlideViewProtocol {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setView(image: UIImageView, label: UILabel) {
-        let screenSet = presenter?.setScreenParameters()
-        image.image = UIImage(named: "\(screenSet?.imageName ?? "")")
-        label.text = screenSet?.labelText
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .darkGray
-        setView(image: imageView, label: label)
         buttonLeft.isHidden = true
+        presenter?.setScreenParameters()
     }
     
+    // MARK: - Setup
+    
+    func setView(model: ScreenSet) {
+        super.imageView.image = UIImage(named: model.imageName)
+        super.label.text = model.labelText
+    }
+    
+    // MARK: - Actions
+    
     @objc override internal func buttonRightPressed() {
-        presenter?.openNextModule(view: self)
+        presenter?.openNextModule()
     }
 }

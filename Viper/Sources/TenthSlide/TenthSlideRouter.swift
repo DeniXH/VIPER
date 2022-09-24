@@ -5,21 +5,42 @@
 //  Created by Денис Холодков on 22.09.2022.
 //
 
-import Foundation
 import UIKit
+
+// MARK: - RouterProtocol
 
 protocol TenthSlideRouterProtocol: AnyObject {
     func openNextModule(view: UIViewController)
 }
 
-class TenthSlideRouter {
+// MARK: - Router
+
+final class TenthSlideRouter {
     weak var presenter: TenthSlidePresenterProtocol?
 }
 
+// MARK: - Extension
+
 extension TenthSlideRouter: TenthSlideRouterProtocol {
+    
+    // MARK: - Module Builder
+    
+    static func build() -> TenthSlideViewController {
+        let entity = TenthSlideEntity()
+        let interactor = TenthSlideInteractor(entity: entity)
+        let router = TenthSlideRouter()
+        let presenter = TenthSlidePresenter(interactor: interactor, router: router)
+        let viewController = TenthSlideViewController(presenter: presenter)
+        presenter.view = viewController
+        interactor.presenter = presenter
+        router.presenter = presenter
+        return viewController
+    }
+    
+    // MARK: - Next Slide
+    
     func openNextModule(view: UIViewController) {
-        let viewControllerSlide = EleventhSlideModuleBuilder.build()
-        // presenter.функция роутера, с параметром ввиде контроллера
+        let viewControllerSlide = EleventhSlideRouter.build()
         view.present(viewControllerSlide, animated: true)
     }
 }

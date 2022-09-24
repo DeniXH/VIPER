@@ -5,16 +5,23 @@
 //  Created by Денис Холодков on 22.09.2022.
 //
 
-import Foundation
 import UIKit
+
+// MARK: - ViewProtocol
 
 protocol TwelthSlideViewProtocol: AnyObject {
     func setView(image: UIImageView, label: UILabel)
 }
 
-class TwelthSlideViewController: LabelLeftControllerElements, TwelthSlideViewProtocol {
+// MARK: - ViewController
+
+final class TwelthSlideViewController: LabelLeftControllerElements, TwelthSlideViewProtocol {
+    
+    // MARK: - Reference
     
     var presenter: TwelthSlidePresenterProtocol?
+    
+    // MARK: - Initializers
     
     init(presenter: TwelthSlidePresenterProtocol) {
         self.presenter = presenter
@@ -25,17 +32,21 @@ class TwelthSlideViewController: LabelLeftControllerElements, TwelthSlideViewPro
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setView(image: UIImageView, label: UILabel) {
-        let screenSet = presenter?.setScreenParameters()
-        image.image = UIImage(named: "\(screenSet?.imageName ?? "")")
-        label.text = screenSet?.labelText
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         setView(image: imageView, label: label)
     }
+    
+    // MARK: - Setup
+    
+    func setView(image: UIImageView, label: UILabel) {
+        guard let model = presenter?.setScreenParameters() else { return }
+        image.image = UIImage(named: model.imageName)
+        label.text = model.labelText
+    }
+    
+    // MARK: - Actions
     
     @objc override internal func buttonRightPressed() {
         presenter?.openNextModule(view: self)

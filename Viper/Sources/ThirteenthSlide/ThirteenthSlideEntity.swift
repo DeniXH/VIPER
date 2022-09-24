@@ -7,27 +7,38 @@
 
 import Foundation
 
+// MARK: - EntityProtocol
+
 protocol ThirteenthSlideEntityProtocol {
-    func screenSettingsThirteenthScreen() -> ScreenSet
+    func screenSettingsThirteenthScreen() -> SetContentThirteenthScreen
 }
 
-class ThirteenthSlideEntity: ThirteenthSlideEntityProtocol {
+// MARK: - Entity
+
+final class ThirteenthSlideEntity: ThirteenthSlideEntityProtocol {
+    
+    // MARK: - Reference
+    
     weak var interactor: ThirteenthSlideInteractorProtocol?
     
-    func screenSettingsThirteenthScreen() -> ScreenSet {
+    // MARK: - Model Init
+    
+    func screenSettingsThirteenthScreen() -> SetContentThirteenthScreen {
         SetContentThirteenthScreen.getSettingsThirteenthScreen()
     }
 }
+
+// MARK: - Screen Model
 
 struct SetContentThirteenthScreen {
     let pictureSlide: String
     let labelText: String
 }
 
-extension SetContentThirteenthScreen {
-    static func getSettingsThirteenthScreen() -> ScreenSet {
-        let contentScreen = SetContentScreen(pictureSlide: "slide12", labelText: "Плюсы и минусы архитектуры")
-        let content = ScreenSet(contentScreen.pictureSlide, contentScreen.labelText)
-        return content
+// MARK: - Extension
+
+private extension SetContentThirteenthScreen {
+    static func getSettingsThirteenthScreen() -> SetContentThirteenthScreen {
+        SetContentThirteenthScreen(pictureSlide: "slide12", labelText: "Плюсы и минусы архитектуры")
     }
 }

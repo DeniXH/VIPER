@@ -6,30 +6,42 @@
 //
 
 import Foundation
-import UIKit
+
 // протокол
 // слабая ссылка интерактор
+
+// MARK: - EntityProtocol
+
 protocol SecondSlideEntityProtocol {
-    func screenSettings() -> ScreenSet
+    func screenSettings() -> SetContentScreen
 }
 
-class SecondSlideEntity: SecondSlideEntityProtocol {
+// MARK: - Entity
+
+final class SecondSlideEntity: SecondSlideEntityProtocol {
+    
+    // MARK: - References
+    
     weak var interactor: SecondSlideInteractorProtocol?
     
-    func screenSettings() -> ScreenSet {
+    // MARK: - Model Init
+    
+    func screenSettings() -> SetContentScreen {
         SetContentScreen.getSettingsScreen()
     }
 }
+
+// MARK: - Screen Model
 
 struct SetContentScreen {
     let pictureSlide: String
     let labelText: String
 }
 
-extension SetContentScreen {
-    static func getSettingsScreen() -> ScreenSet {
-        let contentScreen = SetContentScreen(pictureSlide: "slide2", labelText: "Настоящий VIPER выглядит так!")
-        let content = ScreenSet(contentScreen.pictureSlide, contentScreen.labelText)
-        return content
+// MARK: - Extension
+
+private extension SetContentScreen {
+    static func getSettingsScreen() -> SetContentScreen {
+        SetContentScreen(pictureSlide: "slide2", labelText: "Настоящий VIPER выглядит так!")
     }
 }

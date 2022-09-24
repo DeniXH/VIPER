@@ -6,31 +6,42 @@
 //
 
 import Foundation
-import UIKit
+
 // протокол
 // слабая ссылка интерактор
+
+// MARK: - EntityProtocol
+
 protocol TenthSlideEntityProtocol {
-    func screenSettingsTenthScreen() -> ScreenSet
+    func screenSettingsTenthScreen() -> SetContentTenthScreen
 }
 
-class TenthSlideEntity: TenthSlideEntityProtocol {
+// MARK: - Entity
+
+final class TenthSlideEntity: TenthSlideEntityProtocol {
+    
+    // MARK: - Reference
+    
     weak var interactor: TenthSlideInteractorProtocol?
     
-    func screenSettingsTenthScreen() -> ScreenSet {
+    // MARK: - Model Init
+    
+    func screenSettingsTenthScreen() -> SetContentTenthScreen {
         SetContentTenthScreen.getSettingsTenthScreen()
     }
 }
+
+// MARK: - Screen Model
 
 struct SetContentTenthScreen {
     let pictureSlide: String
     let labelText: String
 }
 
-extension SetContentTenthScreen {
-    static func getSettingsTenthScreen() -> ScreenSet {
-        let contentScreen = SetContentScreen(pictureSlide: "slide9", labelText: "Схема")
-        let content = ScreenSet(contentScreen.pictureSlide, contentScreen.labelText)
-        return content
+// MARK: - Extension
+
+private extension SetContentTenthScreen {
+    static func getSettingsTenthScreen() -> SetContentTenthScreen {
+        SetContentTenthScreen(pictureSlide: "slide9", labelText: "Схема")
     }
 }
-

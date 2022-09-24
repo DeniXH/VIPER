@@ -6,29 +6,39 @@
 //
 
 import Foundation
-import UIKit
+
+// MARK: - EntityProtocol
 
 protocol ThirdEntityProtocol {
-    func screenSettingsThirdScreen() -> ScreenSet
+    func screenSettingsThirdScreen() -> SetContentThirdScreen
 }
 
-class ThirdEntity: ThirdEntityProtocol {
+// MARK: - Entity
+
+final class ThirdEntity: ThirdEntityProtocol {
+    
+    // MARK: - Reference
+    
     weak var interactor: ThirdInteractorProtocol?
     
-    func screenSettingsThirdScreen() -> ScreenSet {
+    // MARK: - Model Init
+    
+    func screenSettingsThirdScreen() -> SetContentThirdScreen {
         SetContentThirdScreen.getSettingsThirdScreen()
     }
 }
+
+// MARK: - Screen Model
 
 struct SetContentThirdScreen {
     let pictureSlide: String
     let labelText: String
 }
 
-extension SetContentThirdScreen {
-    static func getSettingsThirdScreen() -> ScreenSet {
-        let contentScreen = SetContentScreen(pictureSlide: "slide3", labelText: "История")
-        let content = ScreenSet(contentScreen.pictureSlide, contentScreen.labelText)
-        return content
+// MARK: - Extension
+
+private extension SetContentThirdScreen {
+    static func getSettingsThirdScreen() -> SetContentThirdScreen {
+        SetContentThirdScreen(pictureSlide: "slide3", labelText: "История")
     }
 }

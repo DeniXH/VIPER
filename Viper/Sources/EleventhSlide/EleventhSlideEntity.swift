@@ -6,30 +6,39 @@
 //
 
 import Foundation
-import UIKit
+
+// MARK: - EntityProtocol
 
 protocol EleventhSlideEntityProtocol {
-    func screenSettingsEleventhScreen() -> ScreenSet
+    func screenSettingsEleventhScreen() -> SetContentEleventhScreen
 }
 
-class EleventhSlideEntity: EleventhSlideEntityProtocol {
+// MARK: - Entity
+
+final class EleventhSlideEntity: EleventhSlideEntityProtocol {
+    
+    // MARK: - Reference
+    
     weak var interactor: EleventhSlideInteractorProtocol?
     
-    func screenSettingsEleventhScreen() -> ScreenSet {
+    // MARK: - Model Init
+    
+    func screenSettingsEleventhScreen() -> SetContentEleventhScreen {
         SetContentEleventhScreen.getSettingsEleventhScreen()
     }
 }
+
+// MARK: - Screen Model
 
 struct SetContentEleventhScreen {
     let pictureSlide: String
     let labelText: String
 }
 
-extension SetContentEleventhScreen {
-    static func getSettingsEleventhScreen() -> ScreenSet {
-        let contentScreen = SetContentScreen(pictureSlide: "slide10", labelText: "Распределение модулей между экранами")
-        let content = ScreenSet(contentScreen.pictureSlide, contentScreen.labelText)
-        return content
+// MARK: - Extension
+
+private extension SetContentEleventhScreen {
+    static func getSettingsEleventhScreen() -> SetContentEleventhScreen {
+        SetContentEleventhScreen(pictureSlide: "slide10", labelText: "Распределение модулей между экранами")
     }
 }
-
